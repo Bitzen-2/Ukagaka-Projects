@@ -3,13 +3,13 @@ __system_settings_version__,2
 balloon,C:\Users\User\Desktop\ssp_2_4_90f\balloon\u_aaron_balloon_2\
 Char1.balloon.isleft,0
 inputbox.left,425
-balloon0.offset,30.174
+balloon0.offset,124.182
 scriptbox.left,646
-Char0.centery,693
+Char0.centery,678
 balloon1.offset,461.-34
 Char0.balloon.isleft,1
-Char.VirtualDesktop,ae1ec18b-c94a-4e7a-b446-7bd2b5cbfcab
-Char0.center,879
+Char.VirtualDesktop,c00b4f0b-dd7e-43fa-88ba-dc04dd87bda9
+Char0.center,815
 scriptbox.top,28
 Char1.centery,697
 Char1.center,543

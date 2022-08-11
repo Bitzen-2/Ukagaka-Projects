@@ -26,7 +26,10 @@ On_username
 
 On_homeurl
 {
-	"http://www.somekindofwebhost.com/yourghostsdirectory/"
+	//"https://YourUsername.github.io/YourRepository/Updates/YourGhost/"
+	"https://github.com/Bitzen-2/Ukagaka-Projects/tree/main/Updates/U_Aaron_1.2"
+	
+	//(or even https://raw.githubusercontent.com/YourUsername/YourRepository/master/Updates/YourGhost/)
 }
 
 

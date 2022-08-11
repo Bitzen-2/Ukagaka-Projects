@@ -27,7 +27,7 @@ On_username
 On_homeurl
 {
 	//"https://YourUsername.github.io/YourRepository/Updates/YourGhost/"
-	"https://Bitzen-2.github.io/Ukagaka-Projects/Updates/U_Aaron_1.2/"
+	"https://github.com/Bitzen-2/Ukagaka-Projects/tree/main/Updates/U_Aaron_1.2/"
 	
 	//(or even https://raw.githubusercontent.com/YourUsername/YourRepository/master/Updates/YourGhost/)
 }

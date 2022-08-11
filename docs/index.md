@@ -47,7 +47,7 @@ Right-click on Emily and check that the menu is in English, if it isn't, select 
 
 Emily will continue to speak Japanese, but as long as the right-click menu is in English, you're all set.
 
-Next, you can download [Aaron's .nar file from clicking here]. Once it's finished downloading, drag and drop the file onto Emily, the catgirl. She should download Aaron for you. If something isn't right, you may have to manually extract Aaron yourself. Read past to the troubleshooting section if that's what's happening to you. That shouldn't happen, though. 
+Next, you can download [Aaron's .nar file by clicking here and downloading the file.](https://github.com/Bitzen-2/Ukagaka-Projects/blob/main/U_Aaron_1.2.nar). Once it's finished downloading, drag and drop the file onto Emily, the catgirl. She should download Aaron for you. If something isn't right, you may have to manually extract Aaron yourself. Read past to the troubleshooting section if that's what's happening to you. That shouldn't happen, though. 
 
 If you've successfully downloaded Aaron, congrats! Now all you gotta do is right-click on the catgirl, and find the option in the menu that reads "change ghost". Click on that and select "Aaron". 
 

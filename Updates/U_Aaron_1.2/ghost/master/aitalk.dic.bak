@@ -124,7 +124,7 @@ RandomTalk : nonoverlap
 	"\0\s[28]Ever heard of a 'furry'??\w4\s[30] I haven't either!!\e"
 	"\0\s[28]....\w3 Am I a toaster?\e"
 	"\0\s[29]Remember to check me and any other ghosts you may have reguarly for updates!\w6\s[6] Wouldn't wanna miss out on new content,\w5 would you?\e"
-	"\0\s[29]Remember to check me and any other ghosts you may have reguarly for updates!\w6\s[6] Wouldn't wanna miss out on new content,\w5 would you?\e"
+	"\0\s[29]Remember to check me and any other ghosts you may have reguarly for updates!\w6\s[6] Wouldn't wanna miss out on new jokes,\w5 would you?\e"
 	"\0\s[30]I'd like to learn how to sew to make a plushie or to make more jackets!\w4\s[5] I could even make you one!!!\w4\s[29] How's that sound,\w4 %(username)?\e"
 	"\0\s[30]I used to have a furby as a kid,\w4 \s[4]but one day it ran out of batteries and we didn't have any new ones for it.\w4\s[20] It kept talking though!!\w5 Creepy!!!\e"
 	"\0\s[5]I'd like to try drawing more often!!\w4\s[6] I find it very relaxing.\e"

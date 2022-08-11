@@ -174,6 +174,7 @@ RandomTalk : nonoverlap
 	"\0\s[28]Sleeping comes very natural to me.\w6\s[30] I feel like I could do it with my eyes closed!\e"
 	"\0\s[20]I used to be really indesicive!!\w6\s[30] Nothing much has changed!\e"
 	"\0\s[28]\w8\w8\w8Hm...\w8\w8\s[2]\w4\s[-1]\n\n\w6(\w3.\w8.\w8.\w8?\w3)\w8\w8\n\n\w8\w8\w8(Where did Aaron go?)\w6\w8\w8\s[-1]\w8\n\n(Maybe he left to grab something?)\w8\w8\w8\w8\w8\s[2]\w4\s[30]\n\nHi!\w5 Sorry I was gone,\w5 I had to grab a quick snack because I was getting real hungry!\w6\s[3]\nJust,\w3 uh,\w3 don't check the folder named '%(usersfolder)'.\w6\s[20] I may have taken a bite out of it.\e"
+	"\0\s[28]Who thought up the word 'elephant'?\w5\s[8] It's a rather peculiar word!\e"
 	
 	//dialogues that lead to some random thing. duplicated so they have a chance to appear more often than that of the other dialogues above
 	"\0\s[29]\b2I had a dream last night!\n\n\w3%(dreamstories)\e"

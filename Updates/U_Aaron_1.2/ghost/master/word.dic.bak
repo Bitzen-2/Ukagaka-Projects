@@ -1,0 +1,269 @@
+﻿//---------------------------Envelopes--------------------------
+//This .dic file is probably one of the simplest you will have to edit, and in fact, if the way it works doesn't appeal to you, you can completely ignore it if you like!
+//Basically, what this file does is set up some things that, for the purposes of this file, I'll call envelopes (this is what they're referred to as on the CROW-SSP Dictionary site... at least, that's what I remember, it's been a while since I've checked it). They are technically functions and can do many things, but this file is mostly an organizational tool for storing lists you may use.
+//For the purposes of this file, an envelope is a list that you can populate with items, and this list can be called later during dialogue with the %(name) format. If you've read the walkthrough or gone through any of the other .dic files, you've probably seen these before. %(username) is one, which displays the user's name, and %(heshe) is another, which displays the right pronoun depending on what the user selected in bootend.dic or menu.dic. Other ones include %(passmin), which shows how many minutes have passed since the ghost was started, %(screenheight) which shows the height of the display they're currently on, and %(keroname) for the name of the second character, among many, many others. Many of these are predefined by the AYA scripting and will be listed on the CROW-SSP site mentioned above, and many of them you will never have to use.
+
+//So where does this file come in? Well, you can define your own envelopes/variables if you want! Here's an example.
+
+exampleenvelope
+{
+	"Example Envelope Dialogue 1"
+	"Example Envelope Dialogue 2"
+	"Example Envelope Dialogue 3"
+}
+
+//As you can see, we stated a word, opened some brackets, wrote some text, and closed the brackets. Now when you write ghost dialogue, you can write %(exampleenvelope) and your ghost will randomly display any of the three bits of text within the brackets! You can go ahead and test this yourself to see how it works, and I'll include some sample dialogue with this in aitalk.dic.
+
+//What can you use this kind of envelope for? You can store tons of random information to keep your ghost's dialogue varied! You can store various cities you like in %(city), musicians you like in %(musicians), places your ghost has been in %(places), food you like in %(food), movies you like in %(movie), fandoms you like in %(fandom), characters you like in %(fandomcharacter), celebrities you like under %(celebrity) or friends of yours in %(friends) or bnfs in %(bnfs), folders on your computer under %(folders), Pokemon you like under %(pokemon), insults under %(insult), swear words under %(swearword) which could potentially be hilarious, just about anything! You can make lists of absolutely anything to use with dialogue for your ghost! This .dic file is only limited by your imagination!
+//Not only that, but you can put an envelope IN an envelope. Here's another example.
+
+internalenvelope
+{
+	"Internal Envelope Dialogue 1 - %(exampleenvelope)"
+	"%(username)'s computer"
+	"Here is a blanklist object - %(blanklist)."
+}
+
+//You can nest envelopes all day long, although it might get kind of convoluted if you don't keep track. This is particularly handy with %(username), so your ghost can be specific if they're talking about something of the user's, like their files or folders for example. I'll leave a few lists in here you can fill out as you like. And if this doesn't give you ideas, you can ignore this file, since nothing in it will show up unless you write it into the dialogue. You can add or take away as many items as you want from each list.
+
+		//*********************Advanced User Info*******************************
+	  //These text boxes are meant for those who have an interest in expanding or using more complicated functions in their ghost. Also for my own reference in the future since I plan on using this template too, haha. If you have no interest in any of this and just want to keep things as simple as possible, feel free to skip these boxes.
+	  
+	  //Because these are basically their own functions, you can do other things with them as well as display dialogue. You can add if/else checks, run other functions, have pools of alternate dialogue... the possibilities are really endless.
+	  
+	  //One particularly useful thing you can do is add value changes to an envelope, if your dialogue is in a place where it's not easy to add the change directly. For example...
+	  
+	  //FeelingsGoUp
+	  //{
+	  //Feelings += 1
+	  //"Thank you, %(username), that was really nice of you.\e"
+	  //}
+	  
+	  //So this would display the dialogue as well as change the value. Then you can call this in dialogue if you need to to change the value without having to do a bunch of fiddly business. Specifically I'm thinking about things like RandomTalk, where it can be finicky to have dialogue that also changes a value like this. Like "Oh... wow... %(FeelingsGoUp\e" could go into RandomTalk and still change the value effectively without breaking anything. You can of course also change multiple values at once, and if you don't put dialogue in there, it will change the value invisibly.
+	  
+	  //Another use for these envelopes is to shortcut certain long lines of SakuraScript you don't want to have to keep typing. A good example is if you want to change the font for a character. Take Papyrus from my Gaster ghost, he talks in the font Papyrus. But I don't want to have to type the tag for it for every line of dialogue he does. So instead I can put it in an envelope.
+	  
+	  //p
+	//	{
+	//	"\f[name,Papyrus UT]\f[height,16]"
+	//	}
+		
+		//And then I can make one that'll change the font back to normal.
+		
+	//	d
+	//{
+	//"\f[name,default]\f[height,default]"
+	//}
+	
+	//So in dialogue, to change fonts I'd just have to go "%(p)HEY THERE!%(d)" to change fonts back and forth quickly. These kind of shortcuts can be very useful.
+	
+	//Another way to use envelopes is to store multiple poses for SurfaceRestore in aitalk.dic. Gaster for example has several neutral idle poses, but also several poses for when he's scared. So I can make an envelope like
+	
+	//scared
+	//{
+	//"\0\s[9]\i[3]\i[104]\i[39]"
+	//"\0\s[100]\i[2]\i[40]\i[104]"
+	//"\0\s[100]\i[2]\i[40]\i[106]"
+	//}
+	
+	//And have him randomly pick one whenever I use %(scared) in dialogue. This can be an easy way to vary certain poses without having to manually put them in one at a time, and have some variety when your ghost goes back to its neutral pose in SurfaceRestore.
+		
+	  //***********************************************************************
+
+blanklist
+{
+	"List object 1"
+	"List object 2"
+	"List object 3"
+	"List object 4"
+	"List object 5"
+}
+
+blanklist2
+{
+	"List object 1"
+	"List object 2"
+	"List object 3"
+	"List object 4"
+	"List object 5"
+	"List object 6"
+	"List object 7"
+	"List object 8"
+}
+
+blanklist3
+{
+	"List object 1"
+	"List object 2"
+	"List object 3"
+	"List object 4"
+}
+
+blanklist4
+{
+	"List object 1"
+	"List object 2"
+}
+
+//This envelope in particular I think is fun. You can use this in dialogue to pretend like your ghost is looking through your user's files!
+
+usersfolder
+{
+	"%(username)'s Recycle Bin"
+	"%(username)'s Document folder"
+	"%(username)'s Desktop"
+	"%(username)'s Cat Pictures Folder"
+	"%(username)'s Dog Pictures Folder"
+	if iGotMyMumsPermissionItsOkay <= 2
+	{
+		"%(username)'s secret folder"
+		"%(username)'s 'homework' folder"
+	}
+}
+
+
+//Now, this next envelope is unique. I've called it a double envelope at times, but this is actually technically an array. Note that it has a word, a comma, then another word. This is essentially a list being stored in this envelope. You can call one of the values by using brackets around the number of the list entry. So, the first value (the Korean word) would be %(lessonkor[0]) since all arrays start at 0. The second value (the definition) would be %(lessonkor[1]). If you have a longer array, like "word,word,word,word,word", you can keep calling values by changing the numbers, like %(lessonkor[5]) or %(lessonkor[10]). Arrays can be very powerful and useful for storing a lot of information in a condensed space, but I must level with you, I'm not very good at arrays or figuring out how to use them. :B They can be VERY useful though, if you can wrap your head around how they work. An example of pulling information from this array can be seen in aitalk.dic.
+
+lessonkor
+{
+	"사과(sa-gua),apple"
+	"노동(no-dong),labor"
+	"손가락(son-ga-rak),finger"
+	"마르크스(ma-r-k-s),Marx"
+	"자본주의(ja-bon-ju-yi),capitalism"
+}
+
+//You can also format your envelopes like this as one line separated by semicolons, but personally I think the spaced lists above look nicer. It's up to you however you want to set them up.
+
+blanklistparagraph
+{
+	"List paragraph 1"; "List paragraph 2"; "List paragraph 3"; "List paragraph 4"; "List paragraph 5";
+}
+
+TheYouthOfTodayAreConfusing //this links back to the "toggle inappropriate language" option in aaron's config menu. hopefully if i set it up right it'll work as intended!!
+{
+	if iGotMyMumsPermissionItsOkay >= 2 
+	{
+		"ON"
+	}
+	else
+	{
+		"OFF"
+	}
+	
+}
+
+AbusedByNeedle
+{
+	if BeenPokedByNeedle == "has"
+	{
+		"Aaron has been abused by Needle."
+		"Aaron has endured Needle's wrath."
+	}
+	else
+	{
+		"Fortunately, Aaron hasn't been poked by Needle."
+	}
+}
+
+WhateverDayItIs //There may be a function for this already. i dunno. im usin it anyway
+{
+	if weekday == 1
+	{
+		"Monday"
+	}
+	elseif weekday == 2
+	{
+		"Tuesday"
+	}
+	elseif weekday == 3
+	{
+		"Wednesday"
+	}
+	elseif weekday == 4
+	{
+		"Thursday"
+	}
+	elseif weekday == 5
+	{
+		"Friday"
+	}
+	elseif weekday == 6
+	{
+		"Saturday"
+	}
+	elseif weekday == 7
+	{
+		"Sunday"
+	}
+	else //if for some reason the weekday can't be found, which shouldn't happen, but eh
+	{
+		//"[INSERT WEEKDAY HERE]" //considering he's a robot I feel this is in-character for him to say
+		"Sunday" //for some reason he can't detect when it's Sunday?? idk why but this should fix it
+	}
+}
+
+dreamstories
+{
+	"\0\s[28]I was walking through a forest,\w2\s[20] and then suddenly I found myself lost in the depths of the ocean!!\w5\s[30] I can't even swim!\w5\s[6] It was just a dream,\w2 though.\w7 \s[5]I didn't drown,\w2 %(username).\w5\n\n\s[29]Anyway!\w5 Once I found my way out of the ocean,\w3 I started falling.\w5\s[3] And I could see spikes at the bottom of the fall!!!\w5\s[20] It was such a gut wrenching experience that it almost felt real!?!\w7\s[20] It wasn't fun!!\w5\s[30] Thankfully,\w2 I woke up before I hit the bottom.\w4\s[20] Still kinda shooketh me,\w2 though.\w6\s[28] Maybe it was more of a nightmare than a dream?\e"
+	"\0\s[28]It was...\w6 kind of an intimate dream,\w2 though.\w6\s[29] Long story short,\w2 I was talking to one of my real-life friends,\w5 \s[20]and she started hitting on me??\w6\s[1] How am I supossed to react to that?\w5\s[28] We've known eachother since...\w7\s[20] FOREVER!\w6\s[3] I sure hope it doesn't mean anything.\e"
+	"\0\s[29]I was at a movie theatre,\w2 right?\w5 The movie was going all great,\w2 \s[6]everything was all good.\w5 \s[1]Then I...\w5 had to pee.\w4\s[20] Real bad.\w5\s[3] But the cinema didn't let me leave?\w5\s[20] They threatened legal action if I dare even THINK about moving!!\w5\s[3] I'm scared of movie cinemas to this day.\e"
+	"\0\s[30]I was at a concert for a band I can't remember the name of,\w5\s[5] and it was amazing!!\w6\w8\w8\s[6] That's it.\w5 That's the dream.\e"
+	"\0\s[30]I met up with my family to go to a family vacation,\w2 yeah?\w6 \s[28]But they...\w5 didn't recognize me?\w5\s[8] I wasn't wearing anything weird or out there,\w4 either!!\w5\s[3] They just...\w5\s[28] didn't remember me.\w5\w8\s[3]\n\n\w8.\w8.\w8.\w8Sometimes I worry that may happen in real life.\w6 Purposefully or not.\e"
+	"\0\s[28]I was back in primary school,\w2 grade 4/3.\w5 I tried talking to my peers but they ignored me?\w5\s[20] And then when I told a teacher they said I was expelled!?!?\w6\s[2] Huh????\e"
+	"\0\s[30]My friend and I were chilling in his house,\w4 and he asked me if I wanted to play a boardgame!\w5\s[6] I love board games so I certainly couldn't pass this opportunity up!\w6\s[5] So,\w2 he pulled out Monopoly,\w2 and we started playing.\w4\s[20] But in the middle of the game we were suddenly in a plane??\w5 AND THEN WE WERE TOSSED OUT ONTO THE BEACH?\w5\s[28] Then I saw the most peculiar fellow.\w5\s[29] He looked like a typical beach bro but if he were 50.\w6\s[20] He then said to me,\w5 'Alright campers,\w2 for today's challenge we're gonna see how much g-force this guy can take!'\w6 AND THEN HE GESTURED OVER TO ME??\w6\s[30] I FEAR FOR MY LIFE!\e"
+	if iGotMyMumsPermissionItsOkay >= 2
+	{
+	"\0\b2\s[28]It started off as a normal day,\w5 I woke up and made breakfast,\w5 yada,\w2 yada,\w2 yada.\w6 And then I got a knock on the door.\w5\s[30] And you won't believe who was at the door!\w6\s[20] Thanos in the fucking flesh.\w6\s[28] So,\w4 I queried him.\w6 'Why are you at my door?'\w2 'Are you apart of a cultist regime?',\w5 you know,\w4 the essentials.\w5\s[20] AND THEN HE STARTED BEAT BOXING AT ME???\w6\s[30] I'll try re-creating it for you!\w5\s[6]\n\n/
+	\![set,balloonwait,0.06]'Bm-Tha-A-Tha-Ay-Bm-Bm \n\s[3]Na-a-No-os-the-A \n\s[22]Bm-Tha-Ay-Bm-Nos-Bm-the-A-pt-Bm \n\s[30]Bm-Tha-A-Tha-Ay-Bm-Bm \n\s[6]Na-a-No-os-the-A \n\s[3]Bm-Tha-A-Bm-Na-a-Bm-Bm-pt \n\s[5]Yall gone (Pt) make me act a fool, (Pt) up (B) in  (Pt) here, (B) up (B) in h! (Pt)\n\s[8]Yall gone (Pt) make me lose my (Pt) cool, up in here, (Pt) up in here! (Pt)\n\s[32]Yall gone make (Pt) me bust a (Pft) sweat, up in here, (Pt) up in here! (Pt)\n\s[33]Yall gone make (Pt) my fingers snap, (Pt) up in here, (Pt) up in here! (Pt)\n\s[2]Why should I battle a crusty old man\n\s[6]When you cant even defeat a little weak Peter Pan\n\s[1]Ya (B) lucky this is (Pt) only a beat-box (Pt) battle\n\s[9]Cause in a real battle (Pt) I make ya feel rattled\n\s[7]Look at him, (Pt) he only got one planet, (Pt)\n\s[26]I got the whole Galaxy (Pt) under my dependence, (Pt)\n\s[29]Youre gonna beg (Pt) when you (B) bleed and die, (Pt)\n\s[24]As you realize (Pt) destiny arrived\n\s[2](B) Yall gone (Pt) make me-sla-Bea-pt-ha-sss-\s[22]ssslipita-pa-a-pt-A-prdrdrdr-prdrdrdr (Pt) ha-tugh-ha\n\s[5](B) Yall gone (Pt) make (B) me\ntugh-ha-Bea-pt-ha-sss-ssslipita-pa-a\s[20]-pt-ki-prrsk-kt-Bea-pt-ka-tugh\n\s[32](B) Yall gone (Pt) make me-sla-Bea-pt-ha-sss-ssslipita-pa-\s[8]a-pt-A-prdrdrdr-prdrdrdr (Pt) ha-tugh-ha\n\s[6](B) Yall gone (Pt) make (B) me-tugh-ha-Bea-pt-ha-sss-ssslipita-pa-a-pt-\s[29]ki-prrsk-kt-Bea-pt-ka-tugh\n\s[21]Bm-Tha-A-Tha-Ay-Bm-Bm\n\s[4]Na-a-No-os-the-A\n\s[17]Bm-Tha-Ay-Bm-Nos-Bm-the-A-pt-Bm\n\s[28]Bm-Tha-A-Tha-Ay-Bm-Bm\n\s[23]Na-a-No-os-the-A\n\s[30]Bm-Tha-A-Bm-Na-a-Bm-Bm-pt\n\s[33]Let me show you how to scratch it!-pt-ha-Tugh-ha\n\s[29]Bm-Tha-A-pt-et-The-Bea-et-The-Ba-A-pt-A-Tha-A\n\s[5]Bm-Tha-A-pt-et-The-PRRRSK-kt-Bea-pt-Ha-tugh-Ha\n\s[6]Bm-Tha-A-pt-et-The-Bea-et-The-Ba-A-pt-A-Tha-A-Bm\n\s[30]\![set,balloonwait,0.1]Either way, destiny still arrives\n\w5Beeeeww!!'\![set,balloonwait,1]\n\s[30]\n\w8\w8\s[20]That was a weird ass dream!!!\e"
+	}
+}
+
+randomlyrics
+{
+	"(He seems to be rehearsing the lyrics from "
+	"(He's singing the song "
+	"(He's somewhat mumbling the song "
+	--
+	"'You Give Love a Bad Name')\n\n\w5'...Shot through the heart,\w2\nAnd you're to blame!\w5\nYou give love a bad name!!\w5\nI play my part;\w3 and you play your game!\w6\nYou give love a bad name!...'"
+	"'Somebody Told Me')\n\n\w5'...Well somebody told me you had a boyfriend,\w4\nWho looked like a girlfriend,\w4\nthat I had in February of last year!\n\w6It's not confidential!\w3 I've got potential!!..."
+	"'Criminal')\n\n\w5'...But mama I'm in love with a criminal~\n\w4And this type of love isn't rational,\w4 it's physical!\n\w4Mama please don't cry,\w3 I will be alright\n\w5All reason aside,\w2 I just can't deny,\w4 I love the guy~...'" 
+	"'Somebody That I Used to Know')\n\n\w5'...But you didn't have to cut me off!\w4\nMake out like it never happened\nAnd that we were nothing\nAnd I don't even need your love\nBut you treat me like a stranger\nAnd that feels so rough...'"
+	"'Pretty Little Psycho')\n\n\w5'...Oh,\w4 oh,\w4 oh~\n\w7Oh,\w3 here we go,\n\w7Walkin',\w3 talkin' like you know I want your pretty little psycho!!\nOh,\w4 oh,\w4 oh!\w5\nOh,\w4 here we go!!\n\w7Baby, strike a pose;\n\w5I want your pretty little psycho!!...'"
+	"'Wolf in Sheep's Clothing')\n\n\w5'...So \w2could\w2 you...\w4\nTell me how you're sleeping easy?\w4\nHow you're only thinking of yourself?\w4\nShow me how you justify!\n\w5Telling all your lies like second nature!...'"
+	"'Do I Wanna Know?')\n\n\w5'...\w8\w8\n.\w8.\w8.\w8\n\n\w8\w8\s[1](He seemed to have stopped singing after realizing you were listening.)\e"
+	"'Teenage Dream')\n\n\w5'...You make me!\w4\nFeel like I'm living\s[20]'--\w8\w8\n.\w8.\w8.\w8\n\n\w8\w8\s[1](He seemed to have stopped singing after realizing you were listening.)\e"
+	--
+	"\n\n\w7(What a talented singer!)\e"
+	"\n\n\w7(... He needs to work on his vocal range,\w4 but apart from that,\w5 he's alright.)\e"
+	"\n\n\w7(Really going at it,\w2 too.)\e"
+	"\n\n\w7(He's barely hitting the notes, though.)\e"
+	"\n\n\w7(He's surprisingly good at it!\w4.\w3.\w3.\w5 For an autotuned robot.)\e"
+}
+
+/*
+TotalJumbleGamesplayedC
+{
+	if TotalJumbleGamesplayed >= 1
+	{
+		"%(TotalJumbleGamesplayed)"
+	}
+	elseif TotalJumbleGamesplayed == 1
+	{
+		"1"
+	}
+	else 
+	{
+		"0"
+	}
+}
+ */
+
+ //**** Don't touch this ***************************************************************
+ //This is code stuff and nothing for you to worry about, just save the .dic and move on! You're done!
+ 
+ On_\person
+{
+ 	person
+}
+

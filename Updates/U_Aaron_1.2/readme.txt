@@ -1,0 +1,50 @@
+AARON UKAGAKA!
+
+[Content Warning; swearing, sexual jokes, possible innapropriate/indecent remarks, sudden noises]
+[All of the risque content mentioned above can be toggled on and off in Aaron's config menu, though :D]
+
+Thank you for downloading Aaron!! 
+
+He's the ghost i've been working on for Ghost Jam. I simply aimed to get him done in a week, on top of my usual routine. Since releasing him for Ghost Jam, I've finished all I aimed for him during the event, and even more outside of it.
+
+His purpose is to talk to YOU! He loves to talk! Too much! He's very energetic, and will make sure you know he's fond of you. He's very bubbly, although will humble himself at times. He loves to meet new people like you!
+ 
+He shares random thoughts, hobbies, opinions, puns, songs, and many more things. You, as the user, can ask him for certain things, like to talk about animals you like, or you can ask him for song recommendations, or you could simply annoy him by petting him constantly, the possibilities are endless!
+
+Have fun playing with Aaron!!
+
+--- Credit! ---
+
+Aaron was made using Zarla's Girl & Triangle template! 
+
+Here's the link to the website;
+http://www.ashido.com/ukagaka/
+
+
+Scramble minigame was coded by Zichqec! They make a lot of very cool Ukagaka stuff!
+
+Check them out here!
+https://zichqec.github.io/s-the-skeleton/
+
+The Higher or Lower? minigame was coded by Vita! They also make quite a lot of cool Ukagaka things!
+
+Here's their Twitter, check them out!
+https://twitter.com/yuyudev
+
+--- Hot keys! ---
+
+t - random talk
+
+r - repeat last dialogue
+
+fn + f1 - open the readme (this little dialogue box)
+
+ctrl + d - open calendar
+
+ctrl + L - open SSP loglist
+
+ctrl + w  OR  ctrl + q  OR  right-click menu > Close - close Aaron
+
+--- Contacts ---
+
+DM me on my Instagram Account for inquiries, bugs, and more through the URL at the top of this ReadMe!

@@ -1,0 +1,364 @@
+﻿//---------------------------Mouse Functions--------------------------
+//As you've probably guessed, this .dic file has to do with mouse functions. This includes the petting feature and what happens when you double click your ghost.
+//As a note, this .dic file isn't strictly necessary - I'm pretty sure you can just clear the file and it won't hurt your ghost any, it'll just make it so you can't pet or double click them. And if you're interested in only petting or double clicking one character, all you have to do is delete the chunks of code for the other character you want to be uninvolved. However, I'm assuming most people making ghosts want to make their ghosts pettable and clickable, so this will cover the messages for both.
+
+//Make sure to read the walkthrough page (http://www.ashido.com/ukagaka/) for more details about how to properly format ghost dialogue!
+//I will reiterate that you should be editing these in Notepad++, and in particular, you should set the Language to C (or Java I guess) to properly highlight all the text. It will make things A LOT EASIER for you, trust me! It will also help you keep track of your brackets in case you forget some. If you click on a line with a bracket in Notepad++, it should highlight where the other bracket ends, or turn purple if there's no finishing bracket (which you should definitely fix!)
+//It will also highlight my commented lines in green, so you'll know where they are. Any line beginning with // is a commented line that the code will not read. It's just for your reference!
+
+
+//--OnMouseMove
+//This is a bunch of code determining who the mouse is over. Don't touch any of it.
+
+OnMouseMove
+ {
+		//---- reference3 determines the character in question
+		if reference3 == 0 //if the character is 0, aka the main character
+		{
+			//---- it will run the mouse functions for that character
+			MouseMoveSakura
+		}
+		else //if the character isn't 0, then it must be the side character.
+		{
+			//---- this will run the mouse functions for the side character.
+			MouseMoveKero
+		}
+ }
+ 
+ //*********************Advanced User Info*******************************
+//These text boxes are meant for those who have an interest in expanding or using more complicated functions in their ghost. Also for my own reference in the future since I plan on using this template too, haha. If you have no interest in any of this and just want to keep things as simple as possible, feel free to skip these boxes.
+
+//If you want to have more than two characters at any point, like for example how I added Charger with my Hunter/Smoker ghost, and you want to be able to interact with that character like you can with the others, you will have to add in that character to OnMouseMove above. You'll need to know the p[] you've assigned your third character to, which in Charger's case was 3. You can assign your third character any p you want, just be consistent about using the same p[] everytime. I touch on \p a bit more in the walkthrough.
+//So anyway, as you can see above, OnMouseMove determines who the user is touching, so you'll just have to add in an elseif checking for reference3 == 3, or reference3 == 4, or whatever p number is you're using. More on elseif in the walkthrough and in bootend.dic. After that, you'll just need to copy and paste the other mouse functions below and change the name as you need (for example, MouseMoveCharger, MouseDoubleClickCharger). 
+
+//Note though that the extra character will not be a hard-coded character like 0 and 1! You're basically tricking the program into thinking there's another character, and some functions in things like menu.dic and aitalk.dic won't work quite right if you put in a value other than 0 or 1, and you'll need to be careful about making sure to remove the third character when you're done. But luckily for you, this won't be a problem with any of the mouse functions as far as I'm aware, and you can fill them out for the third character just like you would for the two main ones.
+//***********************************************************************
+
+
+ //--MouseMoveSakura
+ //The petting function for your main character. Remember how it was referred to as sakura in some of the descript.txt and install.txt files?
+ 
+MouseMoveSakura
+ {
+	if reference4 != "" //ignore
+ 	{
+ 		stroke++ //if you move the mouse over the right areas, the stroke count will go up.		
+		if stroke >= 40//if the stroke count is above a certain number, the petting dialogue will kick in. You can change this number to make the petting take longer or shorter if you want. FLELEs have it set to 50 for some reason, which makes it take longer than this.
+		{
+			stroke = 0
+			if reference4 == "Hair" //do you remember the names of the areas you set up for your collisions in surfaces.txt? This is where they come into play! This is where you'd put in the name of your collision, such as head, face, horns, tail, ears, whatever. As mentioned in surfaces.txt, you can add as many collisions to a pose as you want, as long as you make sure to add them all in here so they can actually be used.
+ 			{
+				if PatPat == 69
+					{
+					"\0\s[23]YOU'VE PET ME 69 TIMES NOW!!\w8\w8\n\n\s[5]Hahahahah funny number."
+					}
+					elseif PatPat >= 80
+					{
+						"\0\s[1]It's...\w5 kinda nice now?"
+						"\0\s[5]I mean,\w2 it's not so bad."
+						"\0\s[20]I'm starting to warm up to physical affection."
+						"\0\s[5]"
+						"\0\s[6]"
+						"\0\s[30]More!!\w3 Do more!!"
+						"\0\s[5]Thank you!"
+						"\0\s[6]Hm~"
+						"\0\s[5]Hmm~!"
+						"\0\s[6]Aw,\w2 so sweet."
+					"\0\s[5]Haha!!"
+					"\0\s[1]Hahah"
+					"\0\s[1]Tee hee"
+					"\0\s[1]It feels nice!!"
+					"\0\s[5]I don't mind being pet anymore!\w2\s[30] As long as it's by you, %(username)."
+					"\0\s[30]Maybe this attention isn't so bad!!"
+					"\0\s[6]I think...\w6\s[5] I think this is nice."
+					"\0\s[29]You're such a flirt, %(username)."
+					"\0\s[30]Haha!!\w3\s[5] It's kinda tickilish!!"
+					"\0\s[30]It's not as annoying as before.\w3\s[22] You're getting better at petting, %(username)"
+					}
+				{
+				"\0\s[23]Hey!\w2 Hands off the merch!\e"
+				"\0\s[23]Whoa!\w4 I spent a long time grooming my hair this morning!!"
+				"\0\s[7]Watch it!\w3 My hair is only for show!"
+				"\0\s[7]%(username)!! Stop it!"
+				"\0\s[20]Hey!!! \w4\s[23]Nuh!!\w5 Bad %(username)!!\w4 Shoo!!"
+				"\0\s[23]Away!\w3 Away,\w4 fly!!!"
+				"\0\s[7]You can look but NO TOUCHY!!!"
+				"\0\s[7]AWAY!! NUHHHH!!"
+				"\0\s[7]\4AWAY!! NUHHHH!!"
+				"\0\s[7]\5AWAY!! NUHHHH!!"
+				"\0\s[7]\4Man,\w5 humans these days."
+				"\0\s[6]That kinda feels nice--\w6\s[1] I mean,\s[7]\w4 stop that!!!"
+				"\0\s[20]WhoWhatWhenWhereWhyWhoWhatWhenWhereWhyWhoWhatWhenWhereWhy"
+				"\0\s[20]Hey! Hey! Hey! \![set,balloonwait,0.8]Hey! Hey! Hey! \![set,balloonwait,0.6]Hey! Hey! Hey! \![set,balloonwait,0.4]Hey! Hey! Hey! \![set,balloonwait,0.2]Hey! Hey! Hey! Hey! Hey! Hey! \![set,balloonwait,0.1]Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey!\![set,balloonwait,0.01] Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey! Hey!\![set,balloonwait,1]\w7\n\n%(username)!\w2\w5\n\n\s[23]Don't pet my hair I styled it this morning!!"
+				"\0\s[20]AH!!\w3 MAN DOWN!!\w5 REPEAT, MAN DOWN!!!!"
+				"\0\s[23]Heyheyheyheyheyheyhey!!\w6 Don't touch my hair suddenly!!\w5\s[28] What if I did the same to you?\w5\s[7] It'd be different then,\w3 wouldn't it?\s[23]"
+				//Replace these with whatever petting responses you like. You can also add more dialogue here if you want, or cut them down. Though removing them entirely seems a bit counter-intuitive to all that work we've been doing.
+				
+				if iGotMyMumsPermissionItsOkay >= 2 //tee hee cussing is my favouite pass time
+					{
+					"\0\s[23]Aw hell nah missed me with that shit bruh"
+					"\0\s[9]Fuck nah we aint doin this are we"
+					"\0\s[9]Shit bruh you a quick one"
+					"\0\s[23]Chill shawty!!!"
+					//"\0\s[7]Hell nah fuck this bruh\-\w8\w8\e" I won't include this but the thought of Aaron rage quitting because you're petting him so much entertains me
+					}
+				
+					if PatPat >= 20
+					{
+					"\0\s[23]Please!\w5 Mercy!!"
+					"\0\s[23]You're certainly persistent,\w4 I'll give you that."
+					"\0\s[23]You don't know when to stop,\w5 do you??"
+					}
+				
+					elseif PatPat >= 40
+					{
+					"\0\s[23]God,\w3 you really like annoying me,\w3 don't you?"
+					"\0\s[23]I can't even count the amount of times you've tried to pet my hair.\w5 Ugh."
+					"\0\s[7]Should I even stop you at this point?"
+					}
+				
+					elseif PatPat == 100
+					{
+					"\0\s[20]YOU'VE PET ME 100 TIMES NOW!!\w6 WHEN WILL IT END???"
+					}
+					--
+					PatPat += 1
+					--
+					"\e"
+			}
+				/*
+				elseif PatPat >= 101
+				{
+					"\0\s[23]You've pet me so many times now!!\w2 Could be hundreds!!\w3 When will it stop??"
+					"\0\s[7]It's...\w5 \s[28]kind of starting to feel nice?"
+					--
+				PatPat += 1
+				"\e"
+				}
+				elseif PatPat >= 120 || PatPat != 1 - 119 //Uhh, just hoping this stops any above dialogue from occuring after around 120 strokes
+				{
+					"\0\s[5]I mean,\w2 it's not so bad."
+					"\0\s[20]I'm starting to warm up to physical affection."
+					"\0\s[5]"
+					"\0\s[6]"
+					"\0\s[30]More!!\w3 Do more!!"
+					"\0\s[5]Thank you!"
+					"\0\s[6]Hm~"
+					"\0\s[5]Hmm~!"
+					"\0\s[6]Aw,\w2 so sweet."
+					"\0\s[5]Haha!!"
+					"\0\s[1]Hahah"
+					"\0\s[1]Tee hee"
+					"\0\s[1]It feels nice!!"
+					"\0\s[5]I don't mind being pet anymore!\w2\s[30] As long as it's by you, %(username)."
+					"\0\s[30]Maybe this attention isn't so bad!!"
+					"\0\s[6]I think...\w6\s[5] I think this is nice."
+					"\0\s[29]You're such a flirt, %(username)."
+					"\0\s[30]Haha!!\w3\s[5] It's kinda tickilish!!"
+					"\0\s[30]It's not as annoying as before.\w3\s[22] You're getting better at petting, %(username)"
+					--
+				PatPat += 1
+				"\e"
+				}*/
+ 			}
+			
+ 			elseif reference4 == "Tail" //Another area set up by the collisions in surfaces.txt. You can expand this list with as many elseifs as you need depending on how many collisions you've set up.
+ 			{
+				//if ToldAboutCustoms <= 1 //This was meant to warn the user that Aaron doesn't like being pet on his tail but it seems kinda finicky? It ain't working for me, infact it stops aaron from saying any dialogue option, so i'm gonna leave it for now. Dunno why exactly it's doing that, and that frustates me, but whatever smh
+				/*{
+					"\0\s[28]I'll assume you don't know this,\w3 %(username),\w3 but petting someone's tail is a rude thing to do.\w4\s[34] Please don't do that again."
+					--
+					TailFluff = 1 //sets the value for however many times you've pet aarons tail
+					--
+					ToldUserAboutCustoms = 2 //just to make sure aaron doesn't repeat the dialogue above again, i've added this variable in
+					"\e"
+				}*/
+				//elseif ToldUserAboutCustoms == 2 //this should prevent aaron from repeating the dialogue above. hopefully.
+				{
+					"\0\s[24].\w2.\w2.\w2\w8\w8\s[34]Please don't touch my tail, %(username)."
+					"\0\s[24]Ah--\w3\w8 I told you,\w3\s[7] touching someone's tail is a rude thing to do,\w3 right?\w5 \s[35]\n\nThough,\w2 I suppose it's not like you have a tail that others love to stroke."
+					"\0\s[24]Hey!\w4 \n\n\w8\s[35]My tail is very sensitive, %(username)!!"
+					"\0\s[34]Please don't pet my tail."
+					"\0\s[7]I've asked you not to pet my tail!!\w4\s[35] Silly humaniods."
+					"\0\s[37]Hands off,\w3 hotshot!"
+					"\0\s[35]Uh-uh!!\w4 Mine!!!"
+					"\0\s[35]\4Away,\w5 cursed cursor!"
+					"\0\s[35]\5Making me run laps now,\w4 are you?"
+					"\0\s[34]I don't really like having my tail being fondled with,\w2 %(username)."
+					"\0\s[20]Hey!\w4 Stop that!!\w6 \s[36] My tail is a private thing, %(username)."
+					"\0\s[24]Whoa---\w2\s[37] Not..\w5 not there,\w2 %(username)."
+					"\0\s[24]\w2\s[39]\w4\s[36]\w6\w8You made me jump there!!\w6\s[34] Please don't touch my tail."
+					"\0\s[37]Why are you touching my tail!?!??!"
+					"\0\s[35]Nuh!!\w4 Away!!\w5 My tail!!!"
+					"\0\s[6]Fluffy tail.\w5 \s[35]Not for you.\e"
+					"\0\s[35]Nooooooooo!!\w4 Go awayyyyyy!!"
+				
+				//Replace with appropriate dialogue as needed.
+					if iGotMyMumsPermissionItsOkay >= 2 //i really like this toggle thing because i can make aaron be as stupid as i want and it wont affect anyone who doesnt wanna hear it. best thing ever. im so smart. i should get an award or smth
+					{
+						"\0\s[24]Nuh bruh chilllll"
+						"\0\s[24]I aint wanna get salty with you %(username)!!"
+						"\0\s[35]Fuck man these bitches want all of me!!"
+						"\0\s[33]har har har\s[35]"
+						"\0\s[35]man"
+					}
+					--
+					TailFluff += 1
+					--
+					"\e"
+				}
+			
+ 			} 
+			
+ 		}
+	}
+ 	else 
+	{
+ 		// If the mouse isn't over the ghost, it'll zero out the stroke value.
+		stroke = 0
+ 	}
+}
+
+ //---- MouseMoveKero -----------------------------------------------------------------
+ //MouseMoveKero is exactly like the above, except set up for your second character. 
+ 
+ /*
+MouseMoveKero
+ {
+	if reference4 != ""
+ 	{
+ 		stroke++
+ 		if stroke >= 40
+		{
+			stroke = 0
+			if reference4 == "Face" //Put in the name of your collision area you set up for your secondary character here.
+ 			{
+				"\1\s[10]This is a face touching dialogue.\e"
+				"\1\s[10]This is another face touching dialogue.\e"
+				"\1\s[10]This is yet another face touching dialogue.\e"
+				//Replace this dialogue with your secondary character's dialogue.
+ 			}
+			elseif reference4 == "Point" //Like above, put in the name of another collision you set up in surfaces.txt for the secondary character. You can keep adding more elseifs like this for any extra collisions you may have set up.
+			{
+				"\1\s[10]This is a point touching dialogue since I don't really have a head, being a triangle.\e"
+				"\1\s[10]This is another point touching dialogue.\e"
+				"\1\s[10]This is yet another point touching dialogue.\e"
+				//Replace this dialogue as appropriate.
+			}	
+ 		}
+	}
+ 	else
+	{
+ 		// If the mouse isn't over the ghost, it'll zero out the stroke value.
+		stroke = 0
+ 	}
+}
+*/
+
+//---- OnMouseDoubleClick -------------------------------------------------------
+//This is set up much like OnMouseMove above, except this is checking to see if the user is double clicking on the ghost. You also don't need to touch any of this. 
+//Advanced users adding a third character, the same principles from OnMouseMove apply here as well! Make sure to add an elseif with the right number for your third character.
+
+OnMouseDoubleClick
+ {
+	//---- like with the OnMouseMove function above, this determines who the user is clicking on.
+	if reference5 == 0 //checks which button is being used for the click
+	{
+	 	if reference3 == 0 //if the character is 0, aka your main character
+		{
+		MouseDoubleClickSakura
+		}
+		else
+		{
+ 		MouseDoubleClickKero
+		}
+	}
+ }
+
+ //---- MouseDoubleClickSakura ----------------------------------------------------------
+ //Like the petting animation above, this is the reactions they have to being double clicked. These also rely on the collisions you set up in surfaces.txt! This set is specifically for the main character, as indicated by the Sakura in the name again.
+ 
+ //*********************Advanced User Info*******************************
+ //As a note, double clicking on a certain area of your ghost doesn't have to be the user hitting them. You could instead set up a collision for a piece of clothing, and then have the character talk about that bit of clothing when it's double clicked, for example. One of Smoker's double clicks gives her a high-five when she's in a certain pose. Maybe double clicking is patting them, or pointing behind them, or tapping them, or any number of things. You can be creative here with how they respond depending on what areas you've set up as collisions!
+ 
+ //If you don't want your character to be hittable at all, you can just delete everything in MouseDoubleClickSakura except OpenSakuraMenu. So it'd look like
+ 
+ //MouseDoubleClickSakura
+ //{
+ //OpenSakuraMenu
+ //}
+ 
+ //That's all there is to it. This method also applies to the secondary character, Kero, below this set.
+ //***********************************************************************
+ 
+MouseDoubleClickSakura
+ {
+ 	if reference4 == "Hair"  //reference4 == "Face" //here, this is checking to see if the user is double clicking on either the character's head OR their face, which for our purposes means they're hitting the ghost. More about operators at the walkthrough.
+	{
+		/*"\0\s[0]This is the hitting dialogue.\w8\1\s[15]lol\w8\0\s[9]\n\n[half]Shut up.\e"
+		"\0\s[0]This is another hitting dialogue.\e"
+		"\0\s[0]This is yet another bit of text for hitting.\e"
+		"\0\s[0]This is the fourth hitting dialogue.\e"*/
+		//Replace this dialogue with appropriate dialogue as you need. You can add more or cut it down if you want, even down to nothing if you want no response from your ghost at all when those areas are double clicked.
+ 	}
+	else
+ 	{
+		//Otherwise, if the user doubleclicks somewhere else on the character, they will open their menu as detailed in menu.dic.
+ 		OpenSakuraMenu
+	}
+ }
+
+ 
+ //---- MouseDoubleClickKero -----------------------------------------------------------
+ //This is just the same as MouseDoubleClickSakura above, except for your secondary character. The same principles apply, including how to make your character unhittable.
+ /*
+ 
+MouseDoubleClickKero
+ {
+ 	if reference4 == "Face" //Triangle doesn't have a separate head really, being a triangle, so this only happens if you doubleclick his face.
+	{
+		"\1\s[10]This is hitting dialogue.\w8\0\s[5]ha ha\w8\1\s[19]\n\n[half]Quiet.\e"
+		"\1\s[10]This is another hit dialogue.\e"
+		"\1\s[10]This is yet another hit dialogue.\e"
+		"\1\s[10]This is the fourth hitting dialogue.\e"
+		//Replace the dialogue here for the second character with whatever you want. What I said above about adding or trimming still holds here.
+ 	}
+	else //Otherwise if you click anywhere else on Triangle's body
+ 	{
+		OpenKeroMenu //This will open his menu set up in menu.dic.
+	}
+ }
+*/
+ //*********************Advanced User Info*******************************
+ //There are other mouse related functions you could set up much like the above, such as OnMouseDragStart, OnMouseDragEnd, OnMouseWheel, and others which correspond to various things you can do with your mouse. You can probably guess what those functions do just by their names - OnMouseWheel would be if someone spun their mouse wheel over a certain area, for example. If you're interested in these, I'd recommend doing some reading at the CROW-SSP Encyclopedia to get a better idea of them and settle down for some trial and error learning as you try to put them in.
+ //***********************************************************************
+ 
+ OnMouseDragStart
+ {
+	 "\0\s[38]"
+	 "\0\s[39]"
+ }
+ 
+ OnMouseDragEnd //there are so many "\0\s[0]"'s here because i don't want aaron to say something everytime you pick him up, weird as it looks
+ {
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[0]"
+	 "\0\s[6]It's nice to be back on the ground."
+	 "\0\s[6]It's nice to be back on the ground."
+ }

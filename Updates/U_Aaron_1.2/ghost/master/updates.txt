@@ -1,0 +1,176 @@
+charset,OSNative
+file,ghost/master/aitalk.dicccc0905a408744397a16a273b8ed240fsize=112627date=2022-08-11T11:40:47
+file,ghost/master/anchor.dica70bc4d627b99e3702c0a80db1606c03size=5149date=2022-05-11T22:01:34
+file,ghost/master/aya5.dll5f91d5ac918774c5295e47c9cd8b18a5size=671744date=2018-12-02T22:24:32
+file,ghost/master/aya5.txt5b25466f52eafad5f32fe6b44b4a1d50size=1283date=2020-10-29T23:16:42
+file,ghost/master/bootend.dic621cd9ab41f30ca37c0a1b98a8f12726size=41898date=2022-07-03T13:43:49
+file,ghost/master/commu.dic8131c66a62a052638e014a5768910a46size=7790date=2022-05-16T18:20:20
+file,ghost/master/descript.txt860ba17d4ffc614ad380841ff8e4515dsize=2628date=2022-05-12T19:49:45
+file,ghost/master/etc.dic2351734f1d119bbdea019f382f8429f4size=38769date=2022-05-15T07:36:36
+file,ghost/master/gomi.dll51fe9597398db01e684a0f9d52c63242size=13312date=2004-06-01T18:00:04
+file,ghost/master/gt_template.ico2e2d0efe41ebbc8b2d25fd827598344asize=100966date=2022-05-12T05:46:07
+file,ghost/master/images/LMAOAOAO.png2f1fd3cbe44404edeafa2411064cfce4size=96598date=2022-06-05T15:18:37
+file,ghost/master/images/NoBitchesiBet.png4e98500d0bdf2e2f494dfd2725c61059size=63234date=2022-06-05T15:15:21
+file,ghost/master/images/OhMyDearestBoy.pnga3457489f8e0c13c9c32400269347dbbsize=66104date=2022-06-05T15:52:50
+file,ghost/master/images/PopOffRock.png883b2ddae270da22039a3d72d4793321size=58091date=2022-06-05T15:38:50
+file,ghost/master/images/SmhMyHead.pngfa4361178feead915f3262d4cab6f495size=84986date=2022-06-05T15:34:09
+file,ghost/master/images/TheBassIsSlappin.pnged62d4a1258fabad72cb20d0bae62e62size=84840date=2022-06-05T15:53:35
+file,ghost/master/images/Wack.png7cbb3fbe8153f4c087a9f7c4a9cfa7e7size=14531date=2022-06-06T06:16:27
+file,ghost/master/mciaudior.dllb1082bccd2aac2017f7936baf2d967b3size=29696date=2003-03-13T14:23:26
+file,ghost/master/menu.dic7e5c8588cce7bba0387a2f2472a792a9size=64567date=2022-08-11T08:21:14
+file,ghost/master/mouse.dic5dd4ca51348770937c2949f6a37cd679size=19660date=2022-08-10T20:03:37
+file,ghost/master/nameteach.dic759c747e0e16ee0e8329e2fa6de31f3asize=20864date=2022-06-05T11:40:14
+file,ghost/master/saori_cpuid.dlld13370aee8e579fe2517d789dba7c45esize=225280date=2004-04-17T17:47:18
+file,ghost/master/shiori3.dic8fb773e71fd3b9458fe8767aab140655size=35270date=2017-10-18T16:26:36
+file,ghost/master/sounds/vine-boom-sound-effect.mp383402d58269d9a4b64824c1c405f2a1dsize=46869date=2022-06-05T15:23:32
+file,ghost/master/string.dic852e735514ee6f7d36d2c31f9300eb91size=9601date=2022-08-11T12:12:20
+file,ghost/master/word.dicede83cebd3eb993f0d0a3621c0519177size=17990date=2022-07-08T08:39:42
+file,install.txtc4fe8ac78df9c10774425450ede2379fsize=919date=2022-05-11T22:18:45
+file,readme.txtba4cc9def2cb2f703b14f254362da4dasize=1913date=2022-08-11T08:08:30
+file,shell/blue man/descript.txtff430ceea9493c79706c217050afca6bsize=5490date=2022-05-31T06:16:11
+file,shell/blue man/menu_background.png1b317bb6fc70fa1fc4ed0409baaa7e6asize=305829date=2022-08-11T09:57:20
+file,shell/blue man/menu_foreground.png48cbaa51a747505400cb655f04e83098size=300355date=2022-08-11T09:57:31
+file,shell/blue man/menu_sidebar.png622a33caf332561f199c0c1599f9d0fesize=15249date=2022-08-11T09:58:43
+file,shell/blue man/read me.txtd391995cb954ffda03374bc1440ed727size=94date=2022-05-09T19:52:22
+file,shell/blue man/surface0.png6c4febc21aef13f0b2ea1b5a89eda683size=54271date=2022-05-31T06:23:35
+file,shell/blue man/surface10.png6213945d84334c931f6c23a567482d4esize=915date=2022-05-07T15:47:36
+file,shell/blue man/surface1001.png8e8cd9ac6015fd1b3c84749ab09f7db5size=2705date=2022-05-31T06:23:47
+file,shell/blue man/surface1002.pngeb614062bb64d17da8d64569aa33b6e6size=2719date=2022-05-31T06:23:55
+file,shell/blue man/surface1501.pngf22666be578da4ef06a24580f78d5a2bsize=58989date=2022-05-31T07:06:43
+file,shell/blue man/surface1502.pngaad9214d155e8ed481847c3738e41ce4size=61626date=2022-06-01T19:20:37
+file,shell/blue man/surface1503.png21f8e3d5d78dfdb458fd2d3c39297229size=58053date=2022-06-01T17:20:04
+file,shell/blue man/surface1504.png231facc9a7bb4c17b9d8c40a046af325size=56245date=2022-06-01T17:20:30
+file,shell/blue man/surface1505.pngf9d9d4bc6faec9af01dbb97ddb038692size=56747date=2022-06-01T19:21:29
+file,shell/blue man/surface1506.pngb6dd050ba31ce9af0a2f2d7da36f7aefsize=58085date=2022-06-01T17:24:31
+file,shell/blue man/surface1507.png583b48fdee0bff3e389dd3dd50ea47aasize=61258date=2022-06-01T17:40:38
+file,shell/blue man/surface1508.pngc4e1443cde006cd7f0f56ee85470ec6asize=53889date=2022-06-01T17:44:50
+file,shell/blue man/surface1509.png0b0d2e470fea90e3a472d59f9c208521size=56357date=2022-06-01T17:39:29
+file,shell/blue man/surface1510.pngc93bbf22e464c7aa5a3d219be81ad4cesize=62641date=2022-05-31T07:08:38
+file,shell/blue man/surface1511.pngf9482c9d5e0fdc9d0de29d8ed53f4eadsize=59333date=2022-06-01T19:22:49
+file,shell/blue man/surface1512.png3b218db577153c92c9b6de49ab92f550size=58046date=2022-06-01T17:21:35
+file,shell/blue man/surface1513.pngdaf976c000f314bcf031964563a2cf96size=56125date=2022-06-01T17:44:22
+file,shell/blue man/surface1514.png1dc0f08ebfa46286c845ff8c56d58b9csize=60561date=2022-06-01T17:45:31
+file,shell/blue man/surface1515.png7d66aacfa6823c1cbd853cf8bef2d88esize=65908date=2022-06-01T18:04:58
+file,shell/blue man/surface1516.png5782f255ee2d6aa93dde79145f4531easize=64836date=2022-06-01T18:04:46
+file,shell/blue man/surface1517.png44c63c739df7ec514a03a811dbd2180dsize=65659date=2022-06-01T18:04:35
+file,shell/blue man/surface1518.png7d5ee4f7c7da7c5748b59a7d6e31ea7bsize=56884date=2022-06-01T18:07:56
+file,shell/blue man/surface1519.png35ba3fec4f6a6013f5f6dc6294c609d6size=57561date=2022-06-01T18:08:58
+file,shell/blue man/surface1520.pngd1e86d579cc53526fc0495d2fcc8e801size=62226date=2022-06-01T18:10:16
+file,shell/blue man/surface1521.pngb1a2560db04820be2373f80f1a5ef6d3size=65022date=2022-06-01T18:15:42
+file,shell/blue man/surface1522.png6af90303f0c9026a43e2f42239ee8e19size=52916date=2022-06-01T19:04:13
+file,shell/blue man/surface1523.png26dc6f029919f005c6b0e184f142b846size=52289date=2022-06-01T19:04:22
+file,shell/blue man/surface1524.png27df4890560b97ff0966e9c39c259374size=50557date=2022-06-01T19:04:30
+file,shell/blue man/surface1525.png0b88fb8ed5166f5ad915125dbce37055size=50001date=2022-06-01T19:04:42
+file,shell/blue man/surface1526.png7455adc1333f15185374ff7e13c4087esize=50062date=2022-06-01T19:04:51
+file,shell/blue man/surface1527.png4ac899715578165441d59fe2fc936bf1size=49903date=2022-06-01T19:05:02
+file,shell/blue man/surface1528.png28ff212ae88d315d656ac448750825d0size=50321date=2022-06-01T19:05:10
+file,shell/blue man/surface1529.png8821f0be0e98a54576c618ea6b13d55asize=51198date=2022-06-01T19:05:18
+file,shell/blue man/surface1530.png24a9596fc130816105caf2c805656359size=50909date=2022-06-01T19:05:26
+file,shell/blue man/surface1531.pngc52f8545097129451e1a04a356f07adasize=51847date=2022-06-01T19:05:37
+file,shell/blue man/surface1532.png7ab88dda9cf315b370af1684c2a9fdcesize=51799date=2022-06-01T19:05:48
+file,shell/blue man/surface1533.png1d02a789ce0a936281024c404b60966bsize=52946date=2022-06-01T19:05:59
+file,shell/blue man/surface1534.png05009ff8d5ddc48986b6db4d24f9f905size=52513date=2022-06-01T19:06:07
+file,shell/blue man/surface1535.png6c4febc21aef13f0b2ea1b5a89eda683size=54271date=2022-06-01T19:06:43
+file,shell/blue man/surface1536.png6c1837bb37894881b2f71d8b990ae973size=59254date=2022-06-01T18:18:04
+file,shell/blue man/surface1537.pngbeaf00067dd0a95f6aa210ea22ef3a26size=3433date=2022-06-01T19:08:50
+file,shell/blue man/surface1538.png9e60752b10a9a5943a206b5427e21418size=3312date=2022-06-01T19:08:43
+file,shell/blue man/surface1539.png7010589f58ec28b4e352a507ef6849c4size=63682date=2022-06-01T19:08:12
+file,shell/blue man/surface1540.png9877f57d49d4655a43593c37a7fdf75bsize=49734date=2022-06-01T19:09:54
+file,shell/blue man/surface1541.png14e946b529b03ff86285b79f9a7dbafbsize=51273date=2022-06-01T19:10:52
+file,shell/blue man/surface1542.pnge991f9a44d7c776cd53edd721b5237a1size=51695date=2022-06-01T19:12:34
+file,shell/blue man/surface1543.png12b654d687ad037f5f7e72f847baef4dsize=51939date=2022-06-01T19:16:44
+file,shell/blue man/surface1544.png58b8f5f4a6c94a2ebf09b53e1b676f38size=60571date=2022-06-01T19:18:23
+file,shell/blue man/surface1545.png53ece139fe3de53fae0f01fc9580c17asize=60595date=2022-06-01T19:18:58
+file,shell/blue man/surfaces.txt30a1b3075e7c0c3c33b6f8d75f308770size=42465date=2022-05-20T18:18:04
+file,shell/blue man/surfacetable.txtf132ad553a131088b08cdbc8dcf3ef86size=414date=2020-10-30T02:07:16
+file,shell/blue man/thumbnail.pnga21d32ef12e5d11028ca5e9dc6fcdf61size=151970date=2022-06-01T19:28:10
+file,shell/master/descript.txt5e3772f81e968457706513312a958b6csize=5486date=2022-05-31T06:16:12
+file,shell/master/menu_background.png72a39224d61fd7c34b783b4ff3cd818esize=288905date=2022-05-15T16:14:45
+file,shell/master/menu_foreground.pngef67d9663af64f831d67ba649589d288size=278500date=2022-05-15T16:14:37
+file,shell/master/menu_sidebar.pngad991e0b92fb61b023fce594ba8865eesize=14633date=2022-05-15T15:55:26
+file,shell/master/read me.txtd391995cb954ffda03374bc1440ed727size=94date=2022-05-09T19:52:22
+file,shell/master/surface0.pnge5c93696d189a2103bf41fed27f5bb26size=56837date=2022-05-12T06:44:51
+file,shell/master/surface10.png6213945d84334c931f6c23a567482d4esize=915date=2022-05-07T15:47:36
+file,shell/master/surface1001.pngdd40019cc79439240453e23714223733size=2644date=2022-05-06T19:12:14
+file,shell/master/surface1002.pngcc99d7d550f418caeaff4077a2ee3196size=2628date=2022-05-06T19:12:21
+file,shell/master/surface1501.png78da8ef1f9df23771510c308c1f84dcbsize=62508date=2022-05-06T19:42:02
+file,shell/master/surface1502.png45694e76bbaa25680d35486f9417a112size=65637date=2022-05-06T19:47:16
+file,shell/master/surface1503.png0ddf3daa2d165602f3570f65564520bdsize=60526date=2022-05-06T20:04:53
+file,shell/master/surface1504.png190c69c67ecf4edd9be2b949d9c77ea6size=59446date=2022-05-06T20:14:34
+file,shell/master/surface1505.png9345f58499096058a10a2224c60dc592size=59209date=2022-05-06T20:28:01
+file,shell/master/surface1506.pngea53c468b6d5663728d80d9e48c49c10size=61131date=2022-05-06T20:29:00
+file,shell/master/surface1507.png30457da2d38cebbc50bb958cf0acde51size=64597date=2022-05-06T20:37:35
+file,shell/master/surface1508.png497fb32b06c3ed25efae62460e59ec49size=56110date=2022-05-06T20:43:10
+file,shell/master/surface1509.pngca84aa4799cfe0f9eccd091aa2ee42e2size=58523date=2022-05-06T20:33:19
+file,shell/master/surface1510.png1dd1ac3a2bdebe820bf4f7308b88c406size=66859date=2022-05-06T19:47:36
+file,shell/master/surface1511.png85af6b0310ce904ade7cdc5604949508size=63462date=2022-05-06T19:48:15
+file,shell/master/surface1512.png41507e95eb6d1891c7f894a548251bcbsize=61124date=2022-05-06T20:17:32
+file,shell/master/surface1513.pnge221685ee87712a492215ce112b7ebf6size=58332date=2022-05-15T14:09:42
+file,shell/master/surface1514.png31213ff40039a2ece73b7f095f017a5asize=63737date=2022-05-07T08:24:02
+file,shell/master/surface1515.pnge73a0814ef5412f39f4c55461d8021efsize=69837date=2022-05-07T16:11:33
+file,shell/master/surface1516.png6b7233bb607dc015c7846b3b00082af6size=68568date=2022-05-07T16:11:47
+file,shell/master/surface1517.pngce9a0f38a62700e30e0d47094486c79dsize=69537date=2022-05-07T16:11:56
+file,shell/master/surface1518.pnga0b4c0dc1bc00f66e733394aca03241bsize=59251date=2022-05-08T07:46:39
+file,shell/master/surface1519.pngaa79e42cdb71128c3d03794c5f3b6b62size=60084date=2022-05-08T07:46:49
+file,shell/master/surface1520.pngca6324967ba77c9948501cb3c64f7eb4size=65172date=2022-05-08T07:47:01
+file,shell/master/surface1521.png606c662b073bbe9a81f9ce237f49650csize=66164date=2022-05-15T10:29:18
+file,shell/master/surface1522.pngae62b94e1ada67990d4abb44c1539613size=55400date=2022-05-12T06:16:52
+file,shell/master/surface1523.png20d97d4a8d2c110d9da30fab5f3058casize=54460date=2022-05-12T06:17:06
+file,shell/master/surface1524.png33481dd5daae8892cca65f395be355e8size=52913date=2022-05-12T06:17:21
+file,shell/master/surface1525.png63af01834587fb54d1a8bd010f002401size=52042date=2022-05-12T06:17:32
+file,shell/master/surface1526.png0dd2d91f758653987acd631ecf2ce8d2size=52169date=2022-05-12T06:17:49
+file,shell/master/surface1527.png3b5408cef074d4bbf5190a3d29809b4bsize=52189date=2022-05-12T06:18:00
+file,shell/master/surface1528.png743c02b7c43f98967beff13372d0efb6size=52678date=2022-05-12T06:18:09
+file,shell/master/surface1529.png8ede9e8d4a87286b7b6cf03a531c7a85size=53528date=2022-05-12T06:18:26
+file,shell/master/surface1530.pnge991fefe2dd9531c8a2b326aec92ef83size=53157date=2022-05-12T06:18:42
+file,shell/master/surface1531.png7ccd122192cae0eaa70142672765c3f3size=54463date=2022-05-12T06:19:03
+file,shell/master/surface1532.png87afd56389dad824fc89866d5fe9434dsize=54059date=2022-05-12T06:19:17
+file,shell/master/surface1533.png5284d6f14b2138146b1661ff47160de2size=55291date=2022-05-12T06:19:28
+file,shell/master/surface1534.png520e1cbcbc76cca2f65cb9183fa8aed8size=54923date=2022-05-12T06:19:40
+file,shell/master/surface1535.pnge5c93696d189a2103bf41fed27f5bb26size=56837date=2022-05-12T06:28:53
+file,shell/master/surface1536.png61da4ccf90cc6d70d2b3035f590632dcsize=61562date=2022-05-15T10:44:44
+file,shell/master/surface1537.png6a845b701c82dddb26e4e0c6fa6800d6size=3789date=2022-05-15T10:45:07
+file,shell/master/surface1538.pngb5478e3df1facc2417f354cd8d19a8dbsize=3661date=2022-05-15T10:45:17
+file,shell/master/surface1539.pngdd114318f52a25c7d4e5c104d26bf34esize=66011date=2022-05-15T11:43:38
+file,shell/master/surface1540.png512eeff3897e14e679c7742643c48a49size=52961date=2022-05-15T14:27:58
+file,shell/master/surface1541.png630674e5d60c029dd57b87f4a78a7439size=55333date=2022-05-15T14:35:02
+file,shell/master/surface1542.pngaa36c69e8f0e8e5907055bb630635dd3size=55801date=2022-05-15T14:35:13
+file,shell/master/surface1543.png7724da8254464f7aff80cb6d8699350fsize=56042date=2022-05-15T14:35:23
+file,shell/master/surface1544.png58f87a3a7de8b8e69c63bb9b97eae691size=63002date=2022-05-20T06:15:36
+file,shell/master/surface1545.pngcc829bdac5ed01d33ab7689675df9bc3size=63038date=2022-05-20T18:17:25
+file,shell/master/surfaces.txt30a1b3075e7c0c3c33b6f8d75f308770size=42465date=2022-05-20T18:18:04
+file,shell/master/surfacetable.txtf132ad553a131088b08cdbc8dcf3ef86size=414date=2020-10-30T02:07:16
+file,shell/master/thumbnail.png092f0568083a3124ad13dd29ff92e106size=141640date=2022-05-08T11:48:20
+file,thumbnail.png092f0568083a3124ad13dd29ff92e106size=141640date=2022-05-08T11:49:06
+file,u_aaron_balloon_2/KGCorneroftheSky.ttfc6130510920fe1ecfa14bdf35062b69csize=64772date=2022-05-07T17:29:06
+file,u_aaron_balloon_2/arrow0.pngf11af46cb7b63d2058b95a4350de070csize=215date=2022-05-07T16:52:46
+file,u_aaron_balloon_2/arrow1.png866c62677da4c82d4355fb96e599451esize=234date=2022-05-07T16:52:28
+file,u_aaron_balloon_2/balloonc0.png1c1724f289685956e6817a6269b4fa77size=21756date=2022-05-07T17:08:57
+file,u_aaron_balloon_2/balloonc1.png5bae11ccb0d9f988bbeaf26da2d4b635size=21952date=2022-05-07T17:09:26
+file,u_aaron_balloon_2/balloonc2.png55c0d226e6ba160aea721ba3ed4c616csize=21703date=2022-05-07T17:09:19
+file,u_aaron_balloon_2/balloonc3.png0bf27dbc658b54e4c6d6b0c9564f7facsize=21780date=2022-05-07T17:09:12
+file,u_aaron_balloon_2/balloonk0.png350f6c21f0aaf5cce253a3e301502b22size=34818date=2022-05-11T21:47:52
+file,u_aaron_balloon_2/balloonk0s.txt23c67f640b80139dfa20be941f31e00esize=421date=2014-11-19T10:36:50
+file,u_aaron_balloon_2/balloonk1.png350f6c21f0aaf5cce253a3e301502b22size=34818date=2022-05-11T21:47:58
+file,u_aaron_balloon_2/balloonk1s.txt23c67f640b80139dfa20be941f31e00esize=421date=2014-11-19T10:36:44
+file,u_aaron_balloon_2/balloonk2.pnga1310a10a436feff2a53e8a3efb8f20bsize=68047date=2022-05-11T21:48:05
+file,u_aaron_balloon_2/balloonk2s.txt5da7186894b6ee182c17ebb6982c5203size=603date=2014-11-19T10:37:22
+file,u_aaron_balloon_2/balloonk3.pnga1310a10a436feff2a53e8a3efb8f20bsize=68047date=2022-05-11T21:48:12
+file,u_aaron_balloon_2/balloonk3s.txt538b183bbc80e7f721b912d97c66b84fsize=603date=2014-11-19T10:37:12
+file,u_aaron_balloon_2/balloons0.png6063afd01273a8a45220d2fe31847a79size=30806date=2022-05-07T16:39:05
+file,u_aaron_balloon_2/balloons0s.txt6f8285cc055cdd8e888b6aa8da8e43d9size=1162date=2022-05-07T18:21:40
+file,u_aaron_balloon_2/balloons1.png6063afd01273a8a45220d2fe31847a79size=30806date=2022-05-07T16:39:16
+file,u_aaron_balloon_2/balloons1s.txt52f7294f22255082b946a334dc5dc507size=538date=2022-05-07T18:21:39
+file,u_aaron_balloon_2/balloons2.png26cbb0762c10d41c5d8ebc7d7877c2ebsize=58819date=2022-05-07T16:44:01
+file,u_aaron_balloon_2/balloons2s.txt7f4523d2183afa3ccca9532037fab42asize=4478date=2022-05-07T18:21:36
+file,u_aaron_balloon_2/balloons3.png26cbb0762c10d41c5d8ebc7d7877c2ebsize=58819date=2022-05-07T16:44:19
+file,u_aaron_balloon_2/balloons3s.txt88bf040d140902b85e3099fa27b415a4size=708date=2022-05-07T18:21:34
+file,u_aaron_balloon_2/descript.txt4c06ab23866fa58edb6df07c1d499475size=12635date=2022-05-17T16:44:09
+file,u_aaron_balloon_2/install.txt448ea64d9aac3024d8b25fb28c786c2dsize=906date=2014-11-25T17:14:52
+file,u_aaron_balloon_2/online0.png5c3a50b6d07ebd017678f1f8e4084f54size=370date=2022-05-07T16:58:08
+file,u_aaron_balloon_2/online1.pngc2561f8575bb039515f319cb71dc5413size=376date=2022-05-07T16:58:34
+file,u_aaron_balloon_2/online2.png5382cc3005a7bb89aad1ceda83548ef1size=377date=2022-05-07T16:59:05
+file,u_aaron_balloon_2/online3.png42653edab76644ea99aa3cafc991a45csize=374date=2022-05-07T16:59:31
+file,u_aaron_balloon_2/readme.txt11edf383eb1d83b1a12d3e1fe179ecdbsize=59date=2022-05-09T19:53:44
+file,u_aaron_balloon_2/sstp.png693c2ce24a44df0d1a875616918e54fdsize=184date=2022-05-07T16:48:44
+file,u_aaron_balloon_2/thumbnail.pngd6b35db26f0a713ff49080cdf61c404asize=59949date=2022-05-08T11:23:51

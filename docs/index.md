@@ -37,58 +37,56 @@ You're gonna wanna click on the button on the left that reads "Complete Install 
 
 It should download, go ahead and install it. Your computer may block you from downloading it, or your firewall may block it. Trust me, *it's not malware*, you're safe to download it. Bypass the warning and download & install SSP.
 
+Your taskbar should have a bell icon pop up, that's SSP. I'd reccommend pinning it to your taskbar as it's kinda annoying to go though your files constantly to open up SSP over and over.
+
 Once that's done, you can open it up and a catgirl, Emily, and bunny may pop up. Don't worry much about them. Any menus that pop up you can close, it'll be fine. Hold shift to speed through her dialogue. 
 
-Right-click on Emily and check that the menu is in English, if it isn't, select the fourth option from the bottom and select English. Emily will continue to speak Japanese, but as long as the right-click menu is in English, you're all set.
+Right-click on Emily and check that the menu is in English, if it isn't, select the fourth option from the bottom and select English. 
+
+![Screenshot (125)](https://user-images.githubusercontent.com/111025750/184064072-8cfe4861-5ed6-4535-a848-72db2086b0c1.png)
+
+Emily will continue to speak Japanese, but as long as the right-click menu is in English, you're all set.
 
 Next, you can download [Aaron's .nar file from clicking here]. Once it's finished downloading, drag and drop the file onto Emily, the catgirl. She should download Aaron for you. If something isn't right, you may have to manually extract Aaron yourself. Read past to the troubleshooting section if that's what's happening to you. That shouldn't happen, though. 
 
-If you've successfully downloaded Aaron, congrats! Now all you gotta do is right-click on the catgirl, and find the option in the menu that reads "change ghost". Click on that and select "Aaron". Have fun getting to know him! 
+If you've successfully downloaded Aaron, congrats! Now all you gotta do is right-click on the catgirl, and find the option in the menu that reads "change ghost". Click on that and select "Aaron". 
+
+![Screenshot (127)](https://user-images.githubusercontent.com/111025750/184064112-15ade5e2-34b7-4969-b6f7-c42f1da9a5d8.png)
+
+:D
+
+![Screenshot (128)](https://user-images.githubusercontent.com/111025750/184064240-b6d1bc85-404e-4725-a38f-48a0003ef0d3.png)
+
+If his speech bubble isn't showing up like it is in those pictures, just right click on Aaron, and find the option that says 'balloon'. Click 'Red_Balloon'. 
+
+If the font is a bit off, don't worry either. Open SSP in your files (It should be named something like ssp_2_4_90f, and it should be wherever you downloaded it), and open 'balloon' > 'u_aaron_balloon_2'. Search for a font that's named "KGCornerOfTheSky.ttf". Double click on that and click "install". Close and open up Aaron and his speech bubble should be as it is in the pictures.
 
 
 ## Troubleshooting
 
+![Screenshot (121)](https://user-images.githubusercontent.com/111025750/184064398-6ccc39be-8cdb-455f-849f-df4ad38ee24c.png)
+
+If for some reason, Emily won't install Aaron, you're gonna have to do it manually. Don't fret! it's not too difficult.
+
+OPen up your downloads, and change the file extention of "u_aaron_1.2.nar" to "u_aaron_1.2.zip". Your computer may stop you from doing this, but go through with it anyway, it won't do any damage. 
+
+You should be able to access the file now. Double click on it and open it up. There should be an option up top to 'extract all'. Press that and press browse on the pop-up that ensues. Find a folder on your computer names something similar to "ssp_2_4_90f". Go into that folder and go into the "ghosts" folder that follows. Extract all the files into there. 
+
+Open up Emily and right-click on her and select the "change ghosts" option in the menu. It should come up with "Aaron" there. He should load up just fine after that. Congrats! You've downloaded Aaron! 
+
+If his speech bubble is a bit weird, don't worry. You'll have to try fixing it manually. Right click on Aaron, and find the option that says 'balloon'. Click 'Red_Balloon'. If there's no option for that, go into the ssp folder, into 'ghost', 'u_aaron_1.2' and move the folder that reads 'u_aaron_balloon_2' into the 'balloons' folder, found back in the ssp folder.
+
+If the font is a bit off, don't worry either. Open SSP in your files (It should be named something like ssp_2_4_90f, and it should be wherever you downloaded it), and open 'balloon' > 'u_aaron_balloon_2'. Search for a font that's named "KGCornerOfTheSky.ttf". Double click on that and click "install". Close and open up Aaron and his speech bubble should be as it is in the pictures.
+
 ## How To Use Aaron
 
+Once Aaron has finished his introduction dialogue and rambling about animals, you can play around with him! Double click on him to bring up the main menu.
+![Screenshot (130)](https://user-images.githubusercontent.com/111025750/184066558-5fdb0e10-b58e-49e4-a9c6-03a6e8776ea2.png)
 
+As you can see above, this menu has everything. Feel free to mess around with his menu, and mess with him to see how he reacts. Press 't' to get him to say something random. Right-click on him and select "close" to close him. 
 
+Thank you for reading! Have fun with Aaron :DD
 
+![Screenshot (131)](https://user-images.githubusercontent.com/111025750/184066805-073ee76b-1b3e-4363-892c-d4cc369556f6.png)
 
-
-
-
-You can use the [editor on GitHub](https://github.com/Bitzen-2/Ukagaka-Projects/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Bitzen-2/Ukagaka-Projects/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[Contact me here if you have any bug reports!](https://www.instagram.com/ryder_but_cool/)

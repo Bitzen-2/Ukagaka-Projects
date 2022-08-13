@@ -81,12 +81,19 @@ If the font is a bit off, don't worry either. Open SSP in your files (It should 
 ## How To Use Aaron
 
 Once Aaron has finished his introduction dialogue and rambling about animals, you can play around with him! Double click on him to bring up the main menu.
+
 ![Screenshot (130)](https://user-images.githubusercontent.com/111025750/184066558-5fdb0e10-b58e-49e4-a9c6-03a6e8776ea2.png)
 
-As you can see above, this menu has everything. Feel free to mess around with his menu, and mess with him to see how he reacts. Press 't' to get him to say something random. Right-click on him and select "close" to close him. 
+As you can see above, this menu has everything. Feel free to mess around with his menu!
+You can also pet Aaron by hovering your cursor over his hair and tail. He won't like it, but he can't do much to stop you.
+
+![AaronPettingGif](https://user-images.githubusercontent.com/111025750/184452882-611bdf5e-75f3-42ee-a24e-700d346c2404.gif)
+
+
+Press 't' to get him to say something random. Right-click on him and select "close" to close him. 
 
 Thank you for reading! Have fun with Aaron :DD
 
 ![Screenshot (131)](https://user-images.githubusercontent.com/111025750/184066805-073ee76b-1b3e-4363-892c-d4cc369556f6.png)
 
-[Contact me here if you have any bug reports!](https://www.instagram.com/ryder_but_cool/)
+[Contact me here if you have any bug reports or questions!](https://www.instagram.com/ryder_but_cool/)

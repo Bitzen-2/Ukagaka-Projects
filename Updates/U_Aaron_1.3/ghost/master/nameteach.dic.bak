@@ -1,0 +1,392 @@
+﻿//---------------------------The User's Name--------------------------
+//This .dic file has to do with setting the user's name and suffix/prefix. You may recall some of the functions mentioned here from bootend.dic. As you can see, you can spread functions across multiple .dic files if you like! Just remember my note in bootend.dic about the different between OnFunction and Function.
+
+//This file is fairly short, so don't worry! It shouldn't take you too long to finish.
+
+//Make sure to read the walkthrough (http://www.ashido.com/ukagaka/walkthrough.html) for more details about how to properly format ghost dialogue!
+//I will reiterate that you should be editing these in Notepad++, and in particular, you should set the Language to C (or Java I guess) to properly highlight all the text. It will make things A LOT EASIER for you, trust me! It will also help you keep track of your brackets in case you forget some. If you click on a line with a bracket in Notepad++, it should highlight where the other bracket ends, or turn purple if there's no finishing bracket (which you should definitely fix!)
+//It will also highlight my commented lines in green, so you'll know where they are. Any line beginning with // is a commented line that the code will not read. It's just for your reference!
+
+
+//--OnTeachName
+//This is called from the config menu in the main character's double click menu when the user says they want to change their name. If you look in menu.dic you'll see the code leading to here.
+
+OnTeachName	
+{
+	if reference0 == "TEACHNAME" //ignore this
+		{
+		"\0\s[28]You want me to call you something else now?\w5\s[30] Well,\w3 what would you like me to call you?\w3\![open,inputbox,OnNameTeach,-1]\e"
+		//This is the bit of dialogue you can rewrite if you want. Note that this line ends with \![open,inputbox,OnNameTeach,-1]. You may recognize this from bootend.dic. Essentially, this will lead to the next function. Make sure you don't delete that tag! The rest you can do whatever with though.
+		}
+	else
+		{
+		//This else statement is empty, and I'm mostly pointing this out to mention that you can do this too with your if/elses if you want! An empty else will simply cause your ghost not to do anything. I wouldn't get too crazy with this though.
+		}
+}
+
+
+//--OnNameTeach
+//This is where the user inputs their name and the ghost analyzes it. If you want your ghost to have specific responses to certain names, this is where you would add them. If not, you can erase all the way from the initial if down to the else statement, only leaving from ""\0\s[0]Do you want a title?" to "\![*]\q[-san,titlesan]\e". So it'd look something like
+
+//OnNameTeach
+// {
+	//tempname = reference0
+	
+//"\0\s[0]Do you want a title?\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+	//	--
+	//	if presuffix == "masculine"
+	//	{
+	//	"\![*]\q[Mr.,titlemr]\n/
+	//	\![*]\q[Master,titlemaster]\n"
+	//	}
+	//	elseif presuffix == "feminine" 
+	//	{
+	//	"\![*]\q[Ms.,titlems]\n/
+	//	\![*]\q[Lady,titlelady]\n"
+	//	}
+	//	-- 
+	//	"\![*]\q[-ssi,titlessi]\n/
+	//	\![*]\q[-san,titlesan]\e"
+// }
+
+//If you did so. Otherwise, just fill things the next things as you like.
+
+OnNameTeach
+{
+	tempname = reference0 //this stores the name value from reference0 in tempname
+	reference0 = TOLOWER(reference0) //changes it to lowercase
+	reference0 = REPLACE(reference0," ","") //removes spaces
+	reference0 = REPLACE(reference0,".","") //removes periods
+	reference0 = REPLACE(reference0,"-","") //removes dashes
+	
+	//Those extra TOLOWER/REPLACE things up there basically clean up the user's input so you don't have to check for Girl, GIRL, girl, GiRl, etc. It'll make it much easier to check for any specific name, since you won't have to account for any edge cases. Note that the names you will be checking for should be in all lowercase, however.
+	
+	if reference0 == "aaron" //this checks to see if the user input any variation of the name "Girl". You may want to put in a check here if the user tries to name themselves the same name as your characters, since that could be confusing in dialogue. Or just a response to any kind of strange name, like Barack Obama or Cindy Crawford or Mike Nelson or Random Hajile. Or you can prevent certain offensive names if you don't want users using them. Really the power is yours here.
+	{
+		"\0\s[30]That's my name!!\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[30]Me!!\w5 That's me!!!\w6 \s[5]You can't be me,\w3 haha!\![open,inputbox,OnNameTeach,-1]"
+		//Note here that it's using the same tag as above to reopen the text box to let the user put in another name. You can replace the dialogue with whatever as long as you keep the \![open,inputbox,OnNameTeach,-1] tag.
+	}
+	elseif reference0 == "casper" //like the above, this checks to see if the user put in Triangle. Again, this is mostly to avoid confusion in dialogue between the user and the characters.
+	{
+		"\0\s[5]Haha,\w2 that's the name of my friend!\n\n\x\w4"
+		"\0\s[5]Hey!\w2 I know another Casper!\w8\x\w4"
+		--
+		"\0\s[28]Do you want a title?\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		--
+		if presuffix == "masculine" //I'd like Aaron to comment on the name "Casper", but still let the user set their nickname to it. Kero is called "casper" but you can't interact with Kero, so it wouldn't hurt to set the Users name to Casper.
+		{
+		"\![*]\q[Mr.,titlemr]\n/
+		\![*]\q[Master,titlemaster]\n"
+		}
+		elseif presuffix == "feminine" 
+		{
+		"\![*]\q[Ms.,titlems]\n/
+		\![*]\q[Lady,titlelady]\n"
+		}
+		--
+		"\![*]\q[-ssi,titlessi]\n/
+		\![*]\q[-san,titlesan]\e"
+	}
+	elseif reference0 == "" //This is if the user doesn't put in a name at all, since that'd also get awkward in dialogue.
+	{
+		username = "New Friend" //this sets the user's name to USER.
+		
+		"\0\s[3]You didn't put in anything?\w8\w8\n\n\s[5]No matter!\w5 \s[30]I'll refer to you as 'New Friend'!!\e"
+		//You can change this snip to whatever.
+	}
+	else //if the user put in something not specified above, ie a proper name the ghost can use. 
+	//If you want to remove the title system, what you'd want to do is erase everything in this else statement regarding titles and replace it with something like this.
+	//else
+	//{
+	//username = tempname
+	//"\0\s[0]The user is now called %(username).\e"
+	//}
+	{
+		"\0\s[28]Do you want a title?\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		//You can replace "\0\s[0]Do you want a title?", but don't touch the rest of it.
+		--
+		if presuffix == "masculine" //this value was defined in bootend.dic and menu.dic when the user chose their pronouns. Thus, if someone chose he/him pronouns, they would be able to choose Mr. or Master.
+		{
+		"\![*]\q[Mr.,titlemr]\n/
+		\![*]\q[Master,titlemaster]\n"
+		}
+		elseif presuffix == "feminine" //Likewise, if someone chose she/her pronouns, they could choose Ms. or Lady.
+		{
+		"\![*]\q[Ms.,titlems]\n/
+		\![*]\q[Lady,titlelady]\n"
+		}
+		elseif presuffix == "neither"
+		{
+			"\![*]\q[Mr.,titlemr]\n/
+			\![*]\q[Master,titlemaster]\n/
+			\![*]\q[Ms.,titlems]\n/
+			\![*]\q[Lady,titlelady]\n"
+		}
+		-- //the titles after this are gender neutral and will appear for all users. If you want to remove the masculine and feminine titles entirely, just delete from the curly bracket one line up to the double dashes above "if presuffix == "masculine". That should leave only the neutral titles. Make sure to leave a set of double dashes above the neutral titles though. You can also just put the feminine and masculine titles in here too if you want all titles to be available to all users at all times.
+		"\![*]\q[-ssi,titlessi]\n/
+		\![*]\q[-san,titlesan]\e"
+		//Note that the final line here ends with \e instead of \n/, since it is the final option. Make sure your final option (and ONLY your final option) always ends with \e. More on that in the box below.
+	}
+}
+	//*********************Advanced User Info*******************************
+	//Adding new titles for your users to use is simply a matter of copy and pasting creatively. You can see how the ghost puts together the title and your name in the Select. sections below. Above, you simply need to add a new option and link it to a new Select. For example, you could add "\![*]\q[Mistress,titlemistress]\n/" between Ms. and Lady up there, then write up a Select.titlemistress below that fits the pattern of the others.
+	//***********************************************************************
+	
+	//The following Select.title[word] functions add the title to the user's name, then go to the final step, NameDone. You don't have to touch any of these. Advanced users, notice how these match the linked functions in the choices above.
+	
+Select.titlenone
+{
+		username = tempname
+		NameDone
+}
+
+Select.titlemr
+{
+		username = "Mr. " + tempname
+		NameDone
+}
+
+Select.titlemaster
+{
+		username = "Master " + tempname
+		NameDone
+}
+		
+Select.titlems
+{
+		username = "Ms. " + tempname
+		NameDone
+}
+
+Select.titlelady
+{
+		username = "Lady " + tempname
+		NameDone
+}
+
+Select.titlessi
+{
+		username = tempname + "-ssi"
+		NameDone
+}
+
+Select.titlesan
+{
+		username = tempname + "-san"
+		NameDone
+}
+
+//--NameDone
+//This is the final bit of dialogue your ghosts will have when the user changes their name. There is a special section here for when the user first boots the ghost.
+
+NameDone
+{
+	if firstboot == 1 //this checks for the flag that was set during the firstboot sequence
+	{
+		firstboot = 0 //this turns the flag off
+		
+		//This dialogue will display the first time the user puts in their name. You might want to add some closing thoughts to the introduction your ghost had in OnFirstBoot, or directions about how to use the ghost, or something like that. It's up to you!
+		"\0\s[5]Well,\w5 %(username),\w4 it's very nice to meet you!!\w6 \s[29]My name is Aaron!\w6\s[3] \nMy friends say I like to talk a lot and that I get excited too easily,\w4\s[5] but I'll try to tone it back for you!\w6\s[6]\n I hope we can get to know eachother very well.\w8\x\s[28]Do you...\w6 \s[0]like cats or dogs better?\n\n\![*]\q[Dogs!,chosedog]\n\![*]\q[Cats!,chosecat]\n\![*]\q[Another Animal!,choseanotheranimal]\e"
+	}
+	else
+	{
+	"\0\s[5]What a cool name!\w5\s[30] I'll call you %(username) now!\e"
+	"\0\s[5]Wow!\w4 \s[30]It's sure nice to change it up once in a while,\w4 \s[29]isn't it %(username)?\e"
+	//Rewrite this as you like. Note the %(username) tag here, as you should be well familiar with by now from the walkthrough and the other .dic files. That will display the name the user just created.
+	}	
+}
+
+Select.chosedog
+{
+	"\0\s[5]Yeah!!\w6 I love dogs too!\w6 \s[29]My parent's dog is so cute.\w6 \s[6]His name is "
+	--
+	"Diego" 
+	"Scruff"
+	"Daniel"
+	"Drake"
+	"Sir Fluffington the First"
+	"Charlie"
+	"Damien"
+	"Rocky"
+	"Ruff"
+	--
+	" and he's a "
+	--
+	"German Shepard."
+	"Golden Retriver."
+	"Bull Terrier."
+	"Border Collie."
+	"Dingo."
+	"cross breed."
+	"Pug."
+	"Pomeranian."
+	"Poodle."
+	--
+	"\n\n\w5Say,\w4 do you have a dog?\n\n\![*]\q[Yes,doeshavedog]\n\![*]\q[No,doesnthavedog]\e"
+}
+
+Select.doeshavedog
+{
+	"\0\s[30]You do???\w4\s[5] That's so cool!!\w6\s[28] What's the name?\![open,inputbox,OnDogName]\e"
+}
+
+Select.doesnthavedog
+{
+	"\0\s[3]You don't?\w6 \s[6]That's cool.\w6\s[3] Pets are a big responsibility,\w5 to be honest.\w6\s[20] Not to mention the vet bills.\w7\s[30] Too much money for me!\w6\n\n\![*]\q[I have a Cat!,chosecat]\n\![*]\q[I have Another Animal!,choseanotheranimal]\n\n\![*]\q[Leave conversation,leftconversation]\e"
+}
+
+OnDogName
+{
+	"\0\s[30]That's such a cute name!\w4 I'd love to meet %(reference0) if I weren't a Ukagaka on your screen!\w6 \s[6] I bet your dog is amazing."
+	"\0\s[30]That's such a cool name!\w4 I'd love to meet %(reference0) if I weren't a Ukagaka on your screen!\w6\s[6] I bet your dog is amazing."
+	--
+	AnimalConversations++
+	"\e"
+}
+
+Select.chosecat
+{
+	"\0\s[3]Oh?\w5 \s[20]Cats scare me!\w5 They're so aggresive!!\w7\s[3] Though,\w3 I do play rough with them whenever I see one.\w6\s[28] That may be why I get bitten and scratched.\w5\n\x\w8.\w8.\w8.\w8\w8\s[29] Do you have a cat??\n\n\![*]\q[Yes,doeshavecat]\n\![*]\q[No,doesnthavecat]\e"
+}
+
+Select.doeshavecat
+{
+	"\0\s[5]You do!\w4 That's so cool!\w5\s[28] Does your cat scratch you??\w8\s[3]\w6 Sorry,\w3 that was a dumb question.\w5\s[28] What's your cat's name??\w3\![open,inputbox,OnCatName]\e"
+}
+
+OnCatName
+{
+	"\0\s[30]That's such a cute name!\w4 I'd love to meet %(reference0) if I weren't a Ukagaka on your screen!\w6 \s[6] I bet your cat is amazing."
+	"\0\s[30]That's such a cool name!\w4 I'd love to meet %(reference0) if I weren't a Ukagaka on your screen!\w6\s[6] I bet your cat is amazing."
+	--
+	AnimalConversations++
+	"\e"
+}
+	
+
+Select.doesnthavecat
+{
+	"\0\s[3]You don't?\w6 \s[6]That's cool.\w6\s[3] Pets are a big responsibility,\w5 to be honest.\w6\s[20] Not to mention the vet bills.\w7\s[30] Too much money for me!\w6\n\n\![*]\q[I have a Dog!,chosedog]\n"
+	--
+	AnimalConversations++
+	--
+	"\![*]\q[I have Another Animal!,choseanotheranimal]\n\n\![*]\q[Leave conversation,leftconversation]\e"
+}
+
+Select.choseanotheranimal
+{
+	"\0\s[28]Oh?\w3\s[5] That's cool!\w6 \s[28]What animal would that be?\w4\s[3]And don't be too specific,\w5 \s[20]I don't know many animals by breed.\w3 Only a set couple.\w3\![open,inputbox,OnAnotherAnimalChoice]\e"
+}
+
+OnAnotherAnimalChoice //Hooo boy this is gonna be a long one 
+{
+	if reference0 == "bird" || reference0 == "Bird" || reference0 == "Birds" || reference0 == "birds"
+	{
+		"\0\s[5]Oh!\w5\s[28] I forgot people could have those as pets!!\w5\s[3] Sorry!\w4\n\n\s[29]But I do like birds too.\w3\s[6] They're very cute,\w4\s[5] especially when their feathers look so fluffy.\w2\s[6] Though i'd never actually touch one!\w4\s[2]\w3\s[6] Too scary!"
+	}
+	elseif reference0 == "shark" || reference0 == "Shark" || reference0 == "sharks" || reference0 == "Sharks"
+	{
+		"\0\s[2]SHARKS?!?!\w5\s[3] DON'T THEY SCARE YOU??\w5 I DON'T GO INTO THE OCEAN BECAUSE I DON'T WANNA BE BITTEN BY ONE!!!\w4\s[28] Or,\w2 I suppose going into the ocean with these big metal thighs isn't the best idea.\w3\s[3] BUT YOU GET THE IDEA!!\w3 SCARY!"
+	}
+	elseif reference0 == "wolves" || reference0 == "Wolves" || reference0 == "wolf" || reference0 == "Wolf"
+	{
+		"\0\s[5]Oh!!\w3 \s[30]Yeah!\w5 Wolves are so cool!!\w4 \s[28]I think my ears are wolf ears.\w4\s[3] Not too sure,\w3 though.\w4\s[30] Doesn't matter though!!\w6\s[6] Good choice in animal, %(username)!"
+	}
+	elseif reference0 == "snail" || reference0 == "Snail" || reference0 == "snails" || reference0 == "Snails" 
+	{
+		"\0\s[28]Snails?\w4 I mean,\w3 I don't see the attraction,\w5\s[30] but who am I to judge?\w5\s[3] I don't know too much about them honestly,\w4\s[20] just that France eats them.\w3\s[2]\n\nKinda wack."
+	}
+	elseif reference0 == "slug" || reference0 == "Slug" || reference0 == "slugs" || reference0 == "Slugs"
+	{
+		"\0\s[28]Slugs?\w4 I mean,\w3 I don't see the infatuation,\w5\s[30] but who am I to judge?\w5\s[3] I don't know too much about them honestly,\w4\s[20] just that they have around 27,00 teeth!!\w3\s[28]\n\nWell,\w3 they're not exactly teeth per se,\w3\s[6] but it's very similar."
+	}
+	elseif reference0 == "insects" || reference0 == "Insects" || reference0 == "butterflies" || reference0 == "Butterflies" || reference0 == "Butterfly" || reference0 == "butterfly"
+	{
+		"\0\s[28]Oh?\w3\s[8] That's a new response.\w4 \s[30]Usually,\w2 most people reply with cats,\w2 or dogs,\w2 or birds,\w3 or hell even frogs!!\w4 \s[5]But I respect it nonetheless!!"
+	}
+	elseif reference0 == "bear" || reference0 == "Bear" || reference0 == "bears" || reference0 == "Bears"
+	{
+		"\0\s[30]OH!\w3 YES, BEARS!!\w5 I LOVE BEARS!!\w6 \s[5]Everytime I see one I wanna HUG it so tightly!\w3\s[20] I know it'd probably bite my plastic ass head off in response,\w3\s[30] BUT STILL!"
+	}
+	elseif reference0 == "platypus" || reference0 == "Platypus" || reference0 == "Rakali" || reference0 == "rakali" //for the uninitiated, "rakali" is the aboriginal term for platypus! Although not commonly used in contemporary english, some people use the word "rakali" as a plural word for "platypus". I personally prefer "platypi" as it sounds very funny, and I doubt anyone's gonna enter in "platypuses", lmfao
+	{
+		"\0\s[28]I don't believe I know what exactly that is!\w4 \s[6]I've certainly heard of them,\w2 though!\w5\s[30] I'll search them up later!\e"
+	}
+	elseif reference0 == "mole" || reference0 == "Mole" || reference0 == "mole rat" || reference0 == "Mole Rat" || reference0 == "Mole rat"
+	{
+		"\0\s[28]Mole rat?\w3\s[3] I mean,\w3 the mole rat is very cute,\w3 although the star-nosed one kinda creeps me out.\w4\s[8] I suppose that's a lot coming from me though,\w2\s[3] I am a walking, talking specimen of science fiction."
+	}
+	elseif reference0 == "giraffe" || reference0 == "Giraffe" || reference0 == "giraffes" || reference0 == "Giraffes"
+	{
+		"\0\s[30]Yes!\w5 Giraffes!!\w5\s[29] They're so fascinating,\w3 aren't they?\w5\s[5] Not to mention their long necks are a spectacle to see!!\w4 Ever seen one in real life??\w4 \s[30]THEY'RE SO TALL!!"
+	}
+	elseif reference0 == "fox" || reference0 == "Fox" || reference0 == "foxes" || reference0 == "Foxes"
+	{
+		"\0\s[5]YES!!\w3 FOXESSS!!\w6 \s[30]FOXES FOR DAYS!!!\w6 I LOVE FOXES,\w3 %(username),\w4 THEIR LITTLE SLIM MUZZLE,\w3 BRIGHT ORANGE COAT,\w3 AND FLUFFY ASS FUR!!\w5\s[5] GOD,\w5 they're so cuteee"
+	}
+	elseif reference0 == "penguin" || reference0 == "Penguin" || reference0 == "penguins" || reference0 == "Penguins"
+	{
+		"\0\s[30]Oooohh!!\w4 The little business birds!\w3\s[5] I absolutely love their little waddle,\w3 too.\s[20] Have you ever seen the skeletal system of one though??\w5 Long-as legs!!"
+	}
+	elseif reference0 == "snake" || reference0 == "Snake" || reference0 == "Snakes" || reference0 == "snakes" || reference0 == "snek"
+	{
+		"\0\s[20]Scary!!\w5 Scary,\w3 scary!\w5 \s[8]I mean,\w2 they are also pretty fascinating to be fair,\w2\s[20] but still!\w4\s[3] I fear visiting my friend in Australia because of the amount of snakes over there!!"
+	}
+	elseif reference0 == "dragon" || reference0 == "Dragon" || reference0 == "Dragons" || reference0 == "dragons"
+	{
+		"\0\s[30]Yes!\w3 Dragons,\w2\s[28] even though mythical,\w3\s[30] are so cool!\w5 \s[5]Imagine having wings and breathing fire!!\w3 \s[30]That's such a cool thought!\w3\s[6] I remember having a little dragon plush when I was a wee lad.\w4 Great memories!"
+	}
+	elseif reference0 == "octopus" || reference0 == "Octopus" || reference0 == "Octopi" || reference0 == "octopi" || reference0 == "octopuses" || reference0 == "Octopuses"
+	{
+		"\0\s[20]God,\w2 even though I agree they're amazing animals,\w4\s[3] I can't get the idea of a certain type of manga out of my head whenever I think of octopi!!\w2\s[2] I regret visiting internet websites sometimes!"
+	}
+	elseif reference0 == "crab" || reference0 == "Crab" || reference0 == "Crabs" || reference0 == "crabs"
+	{
+		"\0\s[28]Oh?\w2\s[30] I mean,\w2 the bright red on them is very cool,\w2 \s[20]but they also simultaneously creep the bejeebers out of me!\w3\s[2] Have you seen how big they can get?!?!\w3\s[3] Scary!!"
+	}
+	elseif reference0 == "cat" || reference0 == "Cats" || reference0 == "Cat" || reference0 == "cat"
+	{
+		"\0\s[3]Oh?\w5 \s[20]Cats scare me!\w5 They're so aggresive!!\w7\s[3] Though,\w3 I do play rough with them whenever I see one.\w6\s[28] That may be why I get bitten and scratched.\w5\n\x\w8.\w8.\w8.\w8\w8\s[29] Do you have a cat??\n\n\![*]\q[Yes,doeshavecat]\n\![*]\q[No,doesnthavecat]\e"
+	}
+	elseif reference0 == "owl" || reference0 == "Owl" || reference0 == "Owls" || reference0 == "owls"
+	{
+		"\0\s[30]Yessss!!\w3\s[5] I love their big eyes!\w2 And their tiny beaks!!\w3\s[20] God,\w2 the way they can turn their heads around so far is amazing,\w2 too!!\w4\s[6] They're so fascinating."
+	}
+	elseif reference0 == "dog" || reference0 == "Dog" || reference0 == "Dogs" || reference0 == "dogs"
+	{
+		"\0\s[5]Yeah!!\w6 I love dogs too!\w6 \s[29]My parent's dog is so cute.\w6 \s[6]His name is "
+	--
+	"Diego" 
+	"Scruff"
+	"Daniel"
+	"Drake"
+	"Sir Fluffington the First"
+	"Charlie"
+	"Damien"
+	"Rocky"
+	"Ruff"
+	--
+	" and he's a "
+	--
+	"German Shepard."
+	"Golden Retriver."
+	"Bull Terrier."
+	"Border Collie."
+	"Dingo."
+	"cross breed."
+	"Pug."
+	"Pomeranian."
+	"Poodle."
+	--
+	"\n\n\w5Say,\w4 do you have a dog?\n\n\![*]\q[Yes,doeshavedog]\n\![*]\q[No,doesnthavedog]\e"
+	}
+	else 
+	{
+		"\0\s[28]Huh?\w3\s[30] I don't think I've heard that one before! \w3\s[28].\w2.\w3.\w5\w8 %(reference0)!\w4\n\n\s[29]I'll look into it later!!\w2\s[5] Thanks for telling me though,\w2 %(username)!!"
+		"\0\s[28]Hm?\w3...\w8\s[29]I've never heard of %(reference0) before!\w2 \s[5]I'll look into it later, though!!"
+	}
+	--
+	AnimalConversations++
+	"\e"
+}

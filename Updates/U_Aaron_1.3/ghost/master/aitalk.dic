@@ -209,6 +209,7 @@ RandomTalk : nonoverlap
 	"\0\s[30]How are you, %(username)??\n\n\![*]\q[Good!,OnUserisgood]\n\![*]\q[Not so good,OnUserisnotgood]\e"
 	"\0\s[5]You must be the sun because you're the centre of my universe,\w2 %(username)!\e"
 	"\0\s[28]What do you call a really cool and nice person?\w4\x\s[30]%(username)!!\w6 That's what you call them!\e"
+	"\0\s[5]It's really cozy here,\w2 %(username).\w5\s[6] You're a great interior device designer.\e"
 	
 	
 	//math >:(

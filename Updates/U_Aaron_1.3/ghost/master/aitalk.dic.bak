@@ -2310,6 +2310,11 @@ elseif reference0 == "guitar" || reference0 == "aguitar"
 	OnToldRiddle
 }
 elseif reference0 == "bottle" || reference0 == "abottle"|| reference0 == "theneckofabottle" || reference0 == "neckofabottle"
+{
+	"\0\s[28]Actually,\w4 \s[6]sure!\w5\s[28] I had moreso a guitar in mind,\w5\s[5] but your guess certainly isn't wrong!\w6\s[30] Congrats,\w2 %(username)!"
+	--
+	OnToldRiddle
+}
 else
 {
 	"\0\s[28]Not really,\w4 sorry,\w5 %(username)."

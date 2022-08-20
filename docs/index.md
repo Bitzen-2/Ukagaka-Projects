@@ -6,16 +6,20 @@ Hi!
 
 Before we get into downloading Aaron, let's **define what a Ukagaka is.**
 
-A Ukagaka, or a 'ghost' as it's commonly referred to in English, is a small little desktop buddy! They can do many things like empty your recycle bin, change your background, fix your desktops clock, and much more*! However, many are simply focused on other things, like talking to you, playing games, getting to know you, and other things.
+A Ukagaka, or a 'ghost' as it's commonly referred to in English, is similar to a small little desktop buddy! They can do many things like empty your recycle bin, change your background, fix your desktops clock, and much more*! However, many are simply focused on other things, like talking to you, playing games, getting to know you, and other things.
 _*Note: Not every Ukagaka has these features. Depends upon what the developer has coded into them._
 
-I've made my very own Ukagaka, Aaron the Protogen! He's pretty upbeat, friendly and is keen to meet you!
+I've made this webpage to show you my very own Ukagaka; __Aaron the Protogen!__
+
+A former entertainer and space extraordinaire, Aaron, has somehow made his way into your device! He's an upbeat, friendly guy and is keen to meet new people like you. He has many features to play around with (like a couple minigames, lotta fun facts, heaps of petting remarks, and an ass load of dialogue, songs, and puns) and he'd love to get to know you! 
+
+You don't need to know too much about protogens to use him, either! He mostly focuses on talking to you and getting to know you! :D
 
 ![Screenshot (123)](https://user-images.githubusercontent.com/111025750/184061264-3323eb1e-c5c0-4946-9e18-92750909e333.png)
 
 ![Screenshot (119)](https://user-images.githubusercontent.com/111025750/184061199-58018f56-ee0b-403c-9a6f-acf9112c77ab.png)
 
-Throughout this guide, I'll show you how to download and use him!
+Throughout this guide, I'll show you how to download and use him 👍
 
 ## How To Download Aaron
 First, you're gonna have to download a base program that will allow you to run a ghost. Ukagakas can't run simply on their own, unfortunately. It's not too complicated, though.
@@ -27,27 +31,33 @@ Linux Users: [Ninix](http://ninix-aya.osdn.jp/), [Ninix-aya](https://thanks.yaho
 
 Windows Users: [SSP](http://ssp.shillest.net/)
 
-This tutorial will be focusing on SSP for Windows, as I haven't tested out any other programs. 
+This tutorial will be focusing on SSP for Windows, as I haven't tested out any other programs. If you have a Mac or Linux, so sorry. There may be a couple tutorials online, though.
 
 Once you click on the link, something similar to this should pop up.
+
 ![Screenshot (124)](https://user-images.githubusercontent.com/111025750/184062020-9c16441f-c58f-4bb7-8634-9360ab562831.png)
 
 You're gonna wanna click on the button on the left that reads "Complete Install Package"
+
 ![Screenshot (124) - Copy](https://user-images.githubusercontent.com/111025750/184062079-51d7425c-d7dc-43d3-8345-4b98fdcce146.png)
 
 It should download, go ahead and install it. Your computer may block you from downloading it, or your firewall may block it. Trust me, *it's not malware*, you're safe to download it. Bypass the warning and download & install SSP.
 
-Your taskbar should have a bell icon pop up, that's SSP. I'd reccommend pinning it to your taskbar as it's kinda annoying to go though your files constantly to open up SSP over and over.
+Your taskbar should have a bell icon pop up, that's SSP. I'd reccommend pinning it to your taskbar as it's kinda annoying to go though your files constantly to open up SSP over and over. You don't gotta, but it is easier to do that.
 
-Once that's done, you can open it up and a catgirl, Emily, and bunny may pop up. Don't worry much about them. Any menus that pop up you can close, it'll be fine. Hold shift to speed through her dialogue. 
+Once that's done, you can open it up and a catgirl, Emily, and a yellow bunny will pop up. Don't worry much about them. Any menus that pop up you can close, it'll be fine. Hold shift to speed through the dialogue. 
 
-Right-click on Emily and check that the menu is in English, if it isn't, select the fourth option from the bottom and select English. 
+Right-click on Emily and check that the right-click menu is in English, if it isn't, select the fourth option from the bottom and select English. 
 
 ![Screenshot (125)](https://user-images.githubusercontent.com/111025750/184064072-8cfe4861-5ed6-4535-a848-72db2086b0c1.png)
 
 Emily will continue to speak Japanese, but as long as the right-click menu is in English, you're all set.
 
-Next, you can download [Aaron's .nar file by clicking here and downloading the file.](https://github.com/Bitzen-2/Ukagaka-Projects/blob/main/U_Aaron_1.2.nar). Once it's finished downloading, drag and drop the file onto Emily, the catgirl. She should download Aaron for you. If something isn't right, you may have to manually extract Aaron yourself. Read past to the troubleshooting section if that's what's happening to you. That shouldn't happen, though. 
+Next, you can download [Aaron's .nar file by clicking here and downloading the file.](https://github.com/Bitzen-2/Ukagaka-Projects/blob/main/U_Aaron_1.3.nar) 
+
+![Screenshot (151)](https://user-images.githubusercontent.com/111025750/184518756-b769411c-bd16-4c1f-889c-630ddd520113.png)
+
+Once it's finished downloading, drag and drop the file onto Emily, the catgirl. She should download Aaron for you. If something isn't right, you may have to manually extract Aaron yourself. Read past to the troubleshooting section if that's what's happening to you. That shouldn't happen, though. 
 
 If you've successfully downloaded Aaron, congrats! Now all you gotta do is right-click on the catgirl, and find the option in the menu that reads "change ghost". Click on that and select "Aaron". 
 
